@@ -1,0 +1,18 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx,hyperref}
+\usepackage[letterpaper]{geometry}
+
+\newcommand{\q}[1]{|#1\rangle}
+\newcommand{\tq}[1]{$|#1\rangle$}
+\newcommand{\qa}[1]{\langle#1|}
+\newcommand{\tqa}[1]{$\langle#1|$}
+\newcommand{\ip}[2]{\langle#1|#2\rangle}
+\newcommand{\tip}[2]{$\langle#1|#2\rangle$}
+\newcommand{\op}[2]{\q{#1}\qa{#2}}
+\renewcommand{\top}[2]{\tq{#1}\tqa{#2}}
+
+\begin{document}
+\tqa{0}\tq{1} \tip{0}{1} \top{0}{1}
+\[\qa{0}\q{1}~\ip{0}{1}~\op{0}{1}\]
+\end{document}
