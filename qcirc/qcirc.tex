@@ -1,1 +1,157 @@
-\chapter{Quantum Circuits\label{ch:qcirc}}
+\chapter{Quantum circuits\label{ch:qcirc}}
+
+\section{The qubit}
+
+\section{Bloch sphere interpretation of the qubit}
+
+\section{Single qubit operations}
+Operations on a qubit must preserve the norm of the qubit, i.e., given an operation $O$ on a single qubit and two qubits $\ket{\psi} = a\ket{0} + b\ket{1}$ and $\ket{\psi'} = O\ket{\psi} = a'\ket{0} + b'\ket{1}$, the normalization conditions
+\beq
+a^2 + b^2 = a'^2 + b'^2 = 1
+\eeq
+must hold. For this reason, operators on single qubits are 2x2 unitary matrices. 
+
+The most common single qubit operations are represented by the Pauli matrices.  The Pauli matrices are shown below. 
+
+\beq
+X \equiv \left[\begin{array}{cc}0 & 1\\
+1 & 0\end{array}\right] \text{ ; } Y \equiv \left[\begin{array}{cc}0 & -i\\
+i & 0\end{array}\right] \text{ ; } Z \equiv \left[\begin{array}{cc}1 & 0\\
+0 & -1\end{array}\right]
+\eeq
+
+Three other matrices that are commonly used in quantum computing are the Hadamard ($H$), $\pi/8$ ($T$) and phase ($S$) gates. These are shown below.
+\beq
+H \equiv \frac{X+Z}{\sqrt{2}} = \frac{1}{\sqrt{2}}\left[\begin{array}{cc}1 & 1\\
+1 & -1\end{array}\right] \text{ ; } T \equiv \left[\begin{array}{cc}1 & 0\\
+0 & exp(i\pi/4)\end{array}\right] \text{ ; } S \equiv T^2 = \left[\begin{array}{cc}1 & 0\\
+0 & i\end{array}\right]
+\eeq
+
+In Appendix \ref{ch:expmtx}, we have shown how to exponentiate matrices. Using these results, we now introduce three additional unitary matrices known as \textit{rotation matrices} corresponding to the Pauli matrices. These are shown below.
+
+\begin{align}
+R_x(\theta) &\equiv \exp{-i\theta X/2} = \cos\left(\frac{\theta}{2}\right)I - i\sin\left(\frac{\theta}{2}\right)X = 
+\left[\begin{array}{cc}\cos\frac{\theta}{2} & -i\sin\frac{\theta}{2}\\
+-i\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{array}\right]\\ 
+R_y(\theta) &\equiv \exp{-i\theta Y/2} = \cos\left(\frac{\theta}{2}\right)I - i\sin\left(\frac{\theta}{2}\right)Y = 
+\left[\begin{array}{cc}\cos\frac{\theta}{2} & -\sin\frac{\theta}{2}\\
+\sin\frac{\theta}{2} & \cos\frac{\theta}{2}\end{array}\right]\\ 
+R_z(\theta) &\equiv \exp{-i\theta Z/2} = \cos\left(\frac{\theta}{2}\right)I - i\sin\left(\frac{\theta}{2}\right)Z = 
+\left[\begin{array}{cc}\exp{-i\theta/2} & 0\\
+0 & \exp{i\theta/2}\end{array}\right]
+\end{align}
+
+In general, the rotation by $\theta$ about an axis defined by the real unit vector $\hat{n} = (n_x,n_y,n_z)$ is applied using the following matrix.
+\beq
+R_{\hat{n}}(\theta) \equiv \exp{-i\theta \frac{n_xX + n_yY + n_zZ}{2}} = \cos\left(\frac{\theta}{2}\right)I - i\sin\left(\frac{\theta}{2}\right)(n_xX + n_yY + n_zZ)
+\eeq
+
+Without proof, we present a very useful way of representing unitary operator matrices below. Any unitary operator $U$ can be represented by a matrix which is a product of rotations in the y and z axes plus a global phase. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
+\beq
+U = \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)
+\eeq
+
+Yet another representation of a unitary operator matrix which follows from above is shown here without proof. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
+\beq
+U = \exp{i\alpha}AXBXC
+\label{eq:unitarytosingle}
+\eeq
+In the above representation, $A,B$ and $C$ are unitary themselves and $ABC = I$.
+These representations will be important as we define controlled operations using multiple qubits in the next section. One additional set of identities that we need to keep in mind is the following. The proofs for these are straightforward substitutions and are not shown here.
+\beq
+HXH = Z \text{ ; } HYH = -Y \text{ ; } HZH = X
+\eeq
+
+Figure \ref{fig:singlequbitgates} summarizes all the single qubit gates and shows their circuit notation.
+
+\myfig[scale=0.50]{qcirc/fig/singlequbitgates.png}{Single-qubit gates and their circuit notations}{fig:singlequbitgates}
+
+\section{Multiple qubits and controlled operations}
+So far, we have talked about operations on single qubits. We now discuss a class of families on multiple qubits known as \textit{controlled operations}. In particular, we will discuss two-qubit controlled operations. These discussions can intuitively be generalized for larger numbers of qubits.
+
+The simplest controlled operation is the controlled version of the classical \textsc{NOT} gate, known as the \textsc{CNOT} gate. It operates on two qubits known as the \textit{control qubit} and the \textit{target qubit}. Its operation is described as follows: if the control qubit is set (to \tket{1}), then the target qubit is inverted (from \tket{0} to \tket{1} and vice versa). The shorthand notation for the \textsc{CNOT} gate is given below.
+
+\beq
+\text{\textsc{CNOT}: } \ket{control}\ket{target} \rightarrow \ket{control}\ket{control \oplus target}
+\eeq
+
+The matrix representation for the \textsc{CNOT} operator can be determined as follows from the above shorthand notation.
+\begin{align}
+\text{\textsc{CNOT}: } \ket{0}\ket{0} &\rightarrow \ket{0}\ket{0}\\
+\text{\textsc{CNOT}: } \ket{0}\ket{1} &\rightarrow \ket{0}\ket{1}\\
+\text{\textsc{CNOT}: } \ket{1}\ket{0} &\rightarrow \ket{1}\ket{1}\\
+\text{\textsc{CNOT}: } \ket{1}\ket{1} &\rightarrow \ket{1}\ket{0}
+\end{align}
+
+In the computational basis \{\tket{0}, \tket{1}\}, the \textsc{CNOT} gate acts on two qubits and is therefore 4x4. The columns of the \textsc{CNOT} matrix are the outputs of \tket{0}\tket{0}, \tket{0}\tket{1}, \tket{1}\tket{0} and \tket{1}\tket{1} respectively. Hence,
+
+\beq
+\textsc{CNOT} \equiv \left[\begin{array}{cccc}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0\end{array}\right]
+\eeq
+
+\myfig[width=3cm]{qcirc/fig/cnot.png}{Circuit notation for a \textsc{CNOT} gate}{fig:cnot}
+
+The circuit notation for the \textsc{CNOT} operator is shown in figure \ref{fig:cnot}. In general, a controlled-U operator can be represented by a matrix by noting how if affects to combinations of input qubits. The shorthand notation is shown below.
+
+\beq
+\text{controlled-U: } \ket{control}\ket{target} \rightarrow \ket{control}U^{control}\ket{target}
+\eeq
+
+This general notation leads to a general form for the matrix of a controlled-U operator, which is shown below.
+
+\beq
+\text{controlled-U} \equiv \left[\begin{array}{cc}I & 0\\
+0 & U\end{array}\right]
+\eeq
+
+Note that the above matrix is 4x4 because both $I$ and $U$ are 2x2. Also note that the \textsc{CNOT} operator has the same matrix representation as a controlled-X operator. Notationally,
+
+\beq
+\textsc{CNOT} \equiv \left[\begin{array}{cccc}1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 0 & 1\\
+0 & 0 & 1 & 0\end{array}\right] = \left[\begin{array}{cc}I & 0\\
+0 & X\end{array}\right]
+\eeq
+
+The commonly used circuit notation for a controlled-U operation is shown in figure \ref{fig:cugate}.
+
+\myfig{qcirc/fig/controlledu.png}{A controlled-U operator. Note the control and target qubits}{fig:cugate}
+
+Recall from equation \ref{eq:unitarytosingle} that we can represent unitary operators by elementary operators. Therefore, for a controlled-U gate, we have the following: when the control is disabled, the identity matrix is applied to the target qubit. Otherwise, $U = \exp{i\alpha}AXBXC$ is applied to the target qubit. Also recalling the constraints on $A,B$ and $C$ such that $ABC = I$, this implies that the control qubit affects the $X$ operators, turning them into \textsc{CNOT} gates. 
+
+Also note the following.
+\begin{align}
+\exp{i\alpha}\text{: } \ket{0}\ket{0} &\rightarrow \ket{0}\ket{0}\\
+\exp{i\alpha}\text{: } \ket{0}\ket{1} &\rightarrow \ket{0}\ket{1}\\
+\exp{i\alpha}\text{: } \ket{1}\ket{0} &\rightarrow \ket{1}\exp{i\alpha}(\ket{0}) = \exp{i\alpha}(\ket{1})\ket{0}\\
+\exp{i\alpha}\text{: } \ket{1}\ket{1} &\rightarrow \ket{1}\exp{i\alpha}(\ket{1}) = \exp{i\alpha}(\ket{1})\ket{1}
+\end{align}
+
+From the above equations, we observe that the effect of the global phase can be applied to the control or target qubits. Since it only applies when the control qubit is set, we will apply it there, giving the circuit diagram in figure \ref{fig:udecomp}.
+
+\myfig{qcirc/fig/udecomp.png}{A controlled-U gate decomposed into elementary single-qubit gates}{fig:udecomp}
+
+The above discussion easily applies when there are multiple control and target qubits. Given a unitary operator $U$ applied on $n$ control qubits \{$x_1,x_2,\ldots,x_n$\} and $k$ target qubits \{$y_1,y_2,\dots,y_k$\}, we have the following shorthand notation.
+
+\begin{align}
+\text{controlled-U: } \ket{x_1}\ket{x_2}\ldots\ket{x_{n-1}}\ket{x_n}\ket{y_1}\ket{y_2}\ldots\ket{y_{k-1}}\ket{y_k} \rightarrow\\ \ket{x_1}\ket{x_2}\ldots\ket{x_{n-1}}\ket{x_n}U^{x_1x_2\ldots x_{n-1}x_n}\ket{y_1}\ket{y_2}\ldots\ket{y_{k-1}}\ket{y_k}
+\end{align}
+
+This shorthand notation is shown in circuit notation in figure \ref{fig:cugatem}.
+
+\myfig[height=8cm,width=6cm]{qcirc/fig/controlledumultiple.png}{A multiple-control multiple-target controlled-U operator with 4 control and 3 target qubits}{fig:cugatem}
+
+\section{Summary}
+
+In this chapter, we have introduced the two-state quantum system used in quantum computation known as the qubit. We have indicated its wavefunction and used the Bloch sphere as a means of visualizing qubits. The Bloch sphere is particularly important when we consider single qubit gates. It helps us visualize the effects of the unitary operators that we normally encounter in matrix form.
+
+We have also discussed the fundamental single-qubit gates -- the Pauli gates, their derived rotation operators, the Hadamard, phase and $\pi/8$ gates.
+
+After introducing single-qubit gates, we showed how they can be controlled using additional qubits to form multiple-qubit gates. We showed how to derive the matrices corresponding to these operators and derived general controlled operations in terms of elementary single-qubit gates. The method of control was shown to be applicable even when the number of control and target qubits increases.
+
+For additional reading, including topics such as universal gates and operator approximations, the interested reader is referred to chapter 4 of \cite{nielsen2000}.

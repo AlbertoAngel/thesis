@@ -46,7 +46,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Use packages
 
-%\usepackage{amsfonts}
+\usepackage{amsmath,amssymb,amsthm}
 
 %%% For figures
 \usepackage{graphicx}
@@ -139,19 +139,23 @@
   }
   {\end{list}}
 
-\newcommand{\q}[1]{|#1\rangle}
-\newcommand{\tq}[1]{$|#1\rangle$}
-\newcommand{\qa}[1]{\langle#1|}
-\newcommand{\tqa}[1]{$\langle#1|$}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\tket}[1]{$|#1\rangle$}
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\tbra}[1]{$\langle#1|$}
 \newcommand{\innerp}[2]{\langle#1|#2\rangle}
 \newcommand{\tinnerp}[2]{$\langle#1|#2\rangle$}
 \newcommand{\outerp}[2]{\q{#1}\qa{#2}}
 \newcommand{\touterp}[2]{\tq{#1}\tqa{#2}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\myfig}[4][width=\textwidth]{\begin{figure}\begin{center}\includegraphics[#1]{#2}\caption{#3}\label{#4}\end{center}\end{figure}}
+\renewcommand{\exp}[1]{\text{exp}\left(#1\right)}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Front-matter
 % For early drafts, you may want to disable some of the frontmatter. Simply change this to "\ifodd 1" to do so.
-\ifodd 0
+\ifodd 1
     % front-matter disabled while writing chapters
     \renewcommand{\maketitlepage}{}
     \renewcommand*{\makecopyrightpage}{}
@@ -189,8 +193,13 @@
 
 \makefrontmatter
 
-\tqa{0}\tq{1} \tinnerp{0}{1} \touterp{0}{1}
-\[\qa{0}\q{1}~\innerp{0}{1}~\outerp{0}{1}\]
+\include{qcirc/qcirc}
+\include{optimp/optimp}
+
+\appendix % all chapters following will be labeled as appendices
+\include{appendices/expmtx}
+
+%\include{appendicies/}
 
 \singlespacing
 \bibliographystyle{plain}
