@@ -1,0 +1,39 @@
+\chapter{The Baker-Campbell-Hausdorf Formula\label{ch:bchf}}
+The Baker-Campbell-Hausdorf formula for a complex number $\lambda$ and operators $A,G$ and $C_n$ is given by
+\beq
+\label{eq:bchf}
+e^{\lambda G}Ae^{-\lambda G} = \sum\limits_{n = 0}^\infty \frac{\lambda^n}{n!} C_n
+\eeq
+where $C_n$ is defined recursively such that $C_0 = A$ and $C_n = [G,C_{n-1}]$. Several references on Lie Algebras such as \cite{liealgs}, \cite{liealgs2} and \cite{liealgs3} provide interesting proofs of the formula.
+
+In this paper, we are interested in applying the Baker-Campbell-Hausdorf formula to the unitary matrix which represents the operation of an optical beamsplitter. In particular, for a beamsplitter $B$ of angle $\theta$, the unitary matrix representation is
+\beq
+\label{eq:bseq}
+B = \exp{\theta(\adj{a} b - a\adj{b})}
+\eeq
+For such a beamsplitter, we will compute $Ba\adj{B}$ and $Bb\adj{B}$ for annihilation operators $a$ and $b$ and creation operators $\adj{a}$ and $\adj{b}$. Recall from \ref{annop} that for an annihilation operator $a$, $[a,\adj{a}] = 1$. 
+Setting $G$ in \eqref{eq:bchf} to $\adj{a} b - a\adj{b}$, we have
+\begin{align*}
+[G,a] &= (\adj{a} b - a\adj{b})a - a(\adj{a} b - a\adj{b}) \\
+&= \adj{a}ba - a\adj{b}a - a\adj{a}b + aa\adj{b}
+\end{align*}
+Hence, 
+\begin{align}
+\label{eq:Gcommutes}
+[G,a] &= -b\\
+[G,b] &= a
+\end{align}
+We can now generalize the terms of $C_n$. Setting $C_0 = a$, $C_1 = [G,a] = -b$, $C_2 = [G,C_1] = -a$, $C_3 = [G,C_2] = b,\ldots$ and generally,
+\begin{align*}
+C_n &= i^na \text{ for even n}\\
+C_n &= i^{n+1}b \text{ for odd n}
+\end{align*}
+Hence,
+\begin{align*}
+Ba\adj{B} &= e^{\theta G}ae^{-\theta G}\\
+&= \sum\limits_{n=0}^\infty \frac{\theta^n}{n!}C_n\\
+&= \sum\limits_{n = even} \frac{(i\theta)^n}{n!}a + i\sum\limits_{n = odd}^\infty \frac{(i\theta)^n}{n!}b\\
+&= a\cos\theta + b\sin\theta
+\end{align*}
+Similarly, $Bb\adj{B} = -a\sin\theta + b\cos\theta$.
+
