@@ -11,11 +11,17 @@ In this paper, we are interested in applying the Baker-Campbell-Hausdorf formula
 \label{eq:bseq}
 B = \exp{\theta(\adj{a} b - a\adj{b})}
 \eeq
-For such a beamsplitter, we will compute $Ba\adj{B}$ and $Bb\adj{B}$ for annihilation operators $a$ and $b$ and creation operators $\adj{a}$ and $\adj{b}$. Recall from \ref{annop} that for an annihilation operator $a$, $[a,\adj{a}] = 1$. 
+For such a beamsplitter, we will compute $Ba\adj{B}$ and $Bb\adj{B}$ for annihilation operators $a$ and $b$ and creation operators $\adj{a}$ and $\adj{b}$. Recall from \ref{annihilators} that for annihilation operators $\alpha$ and $\beta$, $[\alpha,\adj{\alpha}] = [\beta,\adj{\beta}] = 1$ and $[\alpha,\beta] = [\adj{\alpha},\beta] = [\alpha,\adj{\beta}] = [\adj{\alpha},\adj{\beta}] = 0$. 
 Setting $G$ in \eqref{eq:bchf} to $\adj{a} b - a\adj{b}$, we have
 \begin{align*}
 [G,a] &= (\adj{a} b - a\adj{b})a - a(\adj{a} b - a\adj{b}) \\
-&= \adj{a}ba - a\adj{b}a - a\adj{a}b + aa\adj{b}
+&= \adj{a}ba - a\adj{b}a - a\adj{a}b + aa\adj{b}\\
+&= \adj{a}ba - a\adj{a}b + aa\adj{b} - a\adj{b}a\\
+&= [\adj{a}b,a] + a\cancelto{0}{[a,\adj{b}]}\\
+&= [\adj{a}b,a]\\
+&= \adj{a}ba - \adj{a}ab + \adj{a}ab - a\adj{a}b\\
+&= \adj{a}\cancelto{0}{[b,a]} - [a,\adj{a}]b\\
+&= -b
 \end{align*}
 Hence, 
 \begin{align}
