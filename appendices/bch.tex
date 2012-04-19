@@ -23,7 +23,7 @@ Setting $G$ in \eqref{eq:bchf} to $\adj{a} b - a\adj{b}$, we have
 &= \adj{a}\cancelto{0}{[b,a]} - [a,\adj{a}]b\\
 &= -b
 \end{align*}
-Hence, 
+Similarly, we can prove that $[G,b] = a$. We summarize these results below. 
 \begin{align}
 \label{eq:Gcommutes}
 [G,a] &= -b\\
@@ -35,11 +35,10 @@ C_n &= i^na \text{ for even n}\\
 C_n &= i^{n+1}b \text{ for odd n}
 \end{align*}
 Hence,
-\begin{align*}
+\begin{align}
 Ba\adj{B} &= e^{\theta G}ae^{-\theta G}\\
 &= \sum\limits_{n=0}^\infty \frac{\theta^n}{n!}C_n\\
 &= \sum\limits_{n = even} \frac{(i\theta)^n}{n!}a + i\sum\limits_{n = odd}^\infty \frac{(i\theta)^n}{n!}b\\
 &= a\cos\theta + b\sin\theta
-\end{align*}
-Similarly, $Bb\adj{B} = -a\sin\theta + b\cos\theta$.
-
+\end{align}
+Similarly, $Bb\adj{B} = -a\sin\theta + b\cos\theta$.$\qed$

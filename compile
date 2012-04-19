@@ -1,4 +1,4 @@
 #pdflatex thesis.tex && bibtex thesis && pdflatex thesis.tex && pdflatex thesis.tex && evince thesis.pdf
 cd ~/courses/thesis/thesis
-python replacematrices.py qcirc/qcircorig.tex optimp/optimporig.tex
+python replacematrices.py qcirc/qcircorig.tex optimp/optimporig.tex qmech/qmechorig.tex
 pdflatex thesis && bibtex thesis && pdflatex thesis && pdflatex thesis

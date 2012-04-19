@@ -143,6 +143,7 @@
 \newcommand{\tket}[1]{$|#1\rangle$}
 \newcommand{\bra}[1]{\langle#1|}
 \newcommand{\tbra}[1]{$\langle#1|$}
+\newcommand{\braket}[2]{\langle#1|#2\rangle}
 \newcommand{\innerp}[2]{\langle#1|#2\rangle}
 \newcommand{\tinnerp}[2]{$\langle#1|#2\rangle$}
 \newcommand{\outerp}[2]{\q{#1}\qa{#2}}
@@ -152,7 +153,14 @@
 \newcommand{\myfig}[4][width=\textwidth]{\begin{figure}\begin{center}\includegraphics[#1]{#2}\caption{#3}\label{#4}\end{center}\end{figure}}
 \newcommand{\adj}[1]{#1^\dagger}
 \renewcommand{\exp}[1]{\text{exp}\left(#1\right)}
-
+\newcommand{\opH}{\boldsymbol H}
+\newcommand{\opN}{\boldsymbol N}
+\newcommand{\opp}{\boldsymbol p}
+\newcommand{\opx}{\boldsymbol x}
+\newcommand{\opP}{\boldsymbol P}
+\newcommand{\opX}{\boldsymbol X}
+\newcommand{\opa}{\boldsymbol a}
+\newcommand{\opaa}{\boldsymbol a^{\dagger}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Front-matter
 % For early drafts, you may want to disable some of the frontmatter. Simply change this to "\ifodd 1" to do so.
@@ -195,6 +203,7 @@
 \makefrontmatter
 
 \include{qcirc/qcirc}
+\include{qmech/qmech}
 \include{optimp/optimp}
 
 \appendix % all chapters following will be labeled as appendices
