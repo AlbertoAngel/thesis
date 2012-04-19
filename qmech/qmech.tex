@@ -1,0 +1,62 @@
+\chapter{Quantum Mechanical Analysis of the Harmonic Oscillator\label{ch:qmech}}
+
+\section{Motivation}
+This chapter will provide the necessary background for understanding optical implementations of quantum gates. We introduce relevant operators such as annihilators and creators based on a quantum mechanical description of the harmonic oscillator. The material in this chapter is based on analysis of the harmonic oscillator provided in \cite{goldstein} and \cite{griffiths}. Additional material concerned with annihilators and creators can be found in \cite{klm}.
+
+\section{Creation and Annihilation Operators\label{annihilators}}
+
+In quantum mechanics, physical observables are represented by Hermitian operators that have real eigenvalues. We represent operators with boldface symbols throughout the chapter. The Hamiltonian of a one-dimensional harmonic oscillator is given below.
+\beq
+\opH = \frac{\opp^2}{2m} + \frac{1}{2}K\opx^2
+\eeq
+In addition, the commutator relationship $[\opx,\opp]$ relates the two physical observables in the above equation. The first term in the Hamiltonian is the kinetic energy, and the second is the potential energy. Thus, the Hamiltonian is the total energy of the system. The normalized position and momentum operators are
+\begin{align}
+\opX &= \sqrt{\frac{K}{\hbar\omega_0}}\opx\\
+\opP &= \frac{\opp}{\sqrt{m\hbar\omega_0}}
+\end{align}
+where $\omega_0 = \sqrt{\frac{K}{m}}$. The Hamiltonian expressed in terms of these normalized operators becomes
+\beq
+\opH = \frac{\hbar\omega_0}{2}\left(\opP^2 + \opX^2\right)
+\eeq
+with a new commutator relationship $[\opX,\opP] = j$. We introduce the non-Hermitian annihilator $\opa$ and its adjoint $\opaa$ as
+\begin{align}
+\opa &= \frac{1}{\sqrt{2}}\left(\opX + j\opP\right)\\
+\opaa &= \frac{1}{\sqrt{2}}\left(\opX - j\opP\right)
+\end{align}
+with a commutator $[\opa,\opaa]=1$. We are also interested in the anti-commutator $\{\opa,\opaa\}$ of the annihilator and its adjoint. Note that
+\begin{align}
+\opa\opaa &= \frac{1}{2}\left(\opX^2+\opP^2+1\right)\\
+\opaa\opa &= \frac{1}{2}\left(\opX^2+\opP^2-1\right)
+\end{align}
+Hence, $\{\opa,\opaa\} = \opa\opaa+\opaa\opa = \opP^2 + \opX^2$. The Hamiltonian can now be expressed in terms of this anti-commutator.
+\begin{align}
+\opH &= \frac{\hbar\omega_0}{2}\left(\opP^2 + \opX^2\right) = \frac{\hbar\omega_0}{2}\left(\opaa\opa + \opa\opaa\right)\\
+&= \hbar\omega_0\left(\opaa\opa + \frac{1}{2}\right)
+\end{align}
+We introduce an additional Hermitian operator known as the number operator $\opN$ such that
+\beq
+\opN = \opaa\opa
+\eeq
+that counts the number of energy quanta excited in the harmonic oscillator. The eigenvectors $\ket{n}$ of $\opN$ are known as \textit{Fock} states and the corresponding eigenvalues are denoted as $N_n$ such that
+\beq
+\opN\ket{n} = N_n\ket{n}
+\eeq
+Since $\opN$ is Hermitian, it has orthonormal eigenvectors and real eigenvalues. In other words, for two eigenvectors $\ket{n},\ket{m}$ of $\opN$, 
+\beq
+\braket{m}{n} = \delta_{mn}
+\eeq
+The annihilation operator and its adjoint have special effects on the Fock states \cite{griffiths}.
+\begin{align}
+\opa\ket{n} &= \sqrt{n}\ket{n-1}\\
+\opaa\ket{n} &= \sqrt{n+1}\ket{n+1}
+\end{align}
+We define $\opa\ket{0} = 0$ for the ground state of the harmonic oscillator. Note that the application of $\opa$ leads to one less quantum while that of $\opaa$ leads to an additional quantum. For this reason, the two operators are usually called the annihilation and creation operators respectively. Starting from the ground state, we can reach a Fock state $\ket{n}$ by repeated application of the creation operator followed by normalization.
+\begin{align}
+\ket{n} &= \frac{\opaa\ket{n-1}}{\sqrt{n}} = \frac{\left(\opaa\right)^2\ket{n-2}}{\sqrt{n}\sqrt{n-1}}=\ldots\\
+&= \frac{1}{\sqrt{\left(n\right)!}}\left(\opaa\right)^n\ket{0}
+\end{align}
+Since the ground state has energy $\frac{\hbar\omega_0}{2}$ with each additional quantum contributing the same energy, the eigenvalues of the Hamiltonian of the harmonic oscillator are related to the Hamiltonian as 
+\beq
+\opH\ket{n} = E_n\ket{n} = \hbar\omega_0\left(n + \frac{1}{2}\right)
+\eeq
+where $E_n$ is the energy eigenvalue corresponding to the Fock state $\ket{n}$.
