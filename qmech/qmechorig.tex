@@ -20,6 +20,7 @@ where $\omega_0 = \sqrt{\frac{K}{m}}$. The Hamiltonian expressed in terms of the
 \eeq
 with a new commutator relationship $[\opX,\opP] = j$. We introduce the non-Hermitian annihilator $\opa$ and its adjoint $\opaa$ as
 \begin{align}
+\label{eq:acdef}
 \opa &= \frac{1}{\sqrt{2}}\left(\opX + j\opP\right)\\
 \opaa &= \frac{1}{\sqrt{2}}\left(\opX - j\opP\right)
 \end{align}
@@ -60,3 +61,28 @@ Since the ground state has energy $\frac{\hbar\omega_0}{2}$ with each additional
 \opH\ket{n} = E_n\ket{n} = \hbar\omega_0\left(n + \frac{1}{2}\right)
 \eeq
 where $E_n$ is the energy eigenvalue corresponding to the Fock state $\ket{n}$.
+\section{Matrix Elements of the Creation and Annihilation Operators}
+In this section, we will investigate the elements of the matrices that represent the annihilation and creation operators. From \eqref{eq:acdef}, we have
+\begin{align}
+\opX &= \frac{1}{\sqrt{2}}\left(\adj{a} + a\right)\\
+\opP &= \frac{j}{\sqrt{2}}\left(\adj{a} - a\right)
+\end{align}
+For Fock states $\ket{m}$ and $\ket{n}$, we now derive a series of relations that reveal the matrix elements of the annihilation and creation operators. Note that for an operator $O$, $\bra{m}O\ket{n}$ is the element $O_{mn}$ of the matrix representation of $O$.
+\begin{align}
+\bra{m}\opa\ket{n} &= \sqrt{n}\braket{m}{n-1} = \sqrt{n}\delta_{m,n-1}\\ 
+\bra{m}\opaa\ket{n} &= \sqrt{n+1}\braket{m}{n+1} = \sqrt{n+1}\delta_{m,n+1}\\ 
+\bra{m}\opaa\opa\ket{n} &= n\braket{m}{n} = n\delta_{m,n}\\ 
+\bra{m}\opa\opaa\ket{n} &= \left(n+1\right)\braket{m}{n} = \left(n+1\right)\delta_{m,n}\\ 
+\bra{m}\opX\ket{n} &= \bra{m}\frac{1}{\sqrt{2}}\left(\adj{a} + a\right)\ket{n} = \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} + \sqrt{n}\delta_{m,n-1}\right)\\ 
+\bra{m}\opP\ket{n} &= \bra{m}\frac{j}{\sqrt{2}}\left(\adj{a} - a\right)\ket{n} = \frac{j}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} - \sqrt{n}\delta_{m,n-1}\right)\\ 
+\bra{m}\opa^2\ket{n} &= \sqrt{n}\bra{m}\opa\ket{n-1} = \sqrt{n(n-1)}\braket{m}{n-2} = \sqrt{n(n-1)}\delta_{m,n-2}\\ 
+\bra{m}\left(\opaa\right)^2\ket{n} &= \sqrt{n+1}\bra{m}\opaa\ket{n+1} = \sqrt{(n+1)(n+2)}\braket{m}{n+2}\\
+&= \sqrt{(n+1)(n+2)}\delta_{m,n+2}\\
+\bra{m}\opX^2\ket{n} &= \bra{m}\frac{1}{2}\left(\left(\opaa\right)^2 + \opaa\opa + \opa\opaa + \opa^2\right)\ket{n}\\
+&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + n\delta_{m,n} + (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+\bra{m}\opP^2\ket{n} &= \bra{m}-\frac{1}{2}\left(\left(\opaa\right)^2 - \opaa\opa - \opa\opaa + \opa^2\right)\ket{n}\\
+&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - n\delta_{m,n} - (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+&= \frac{1}{2}\left(-\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} - \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+\end{align}
