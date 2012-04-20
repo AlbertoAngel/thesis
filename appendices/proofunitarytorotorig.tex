@@ -1,0 +1,34 @@
+\chapter{Decomposing Unitary Matrices into Rotations\label{ch:proofunitarytorot}}
+
+In this appendix, we prove that any unitary 2x2 matrix $U$ can be decomposed into rotations as defined in \eqref{eq:unitarytosinglerot}, which we repeat here for convenience.
+
+\begin{align}
+\label{eq:toprove}
+U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\ 
+&= e^{i\alpha}\mymtx{e^{-i\beta/2} 0 ; 0 e^{i\beta/2}l}
+\mymtx{\cos\frac{\gamma}{2} -\sin\frac{\gamma}{2} ; \sin\frac{\gamma}{2} \cos\frac{\gamma}{2}l} 
+\mymtx{e^{-i\delta/2} 0 ; 0 e^{i\delta/2}l}
+\end{align}
+
+Consider the unitary matrix below. It is formed by carrying out the product above.
+\beq
+U = \mymtx{e^{i\left(\alpha-\frac{\beta}{2}-\frac{\delta}{2}\right)}\cos\frac{\gamma}{2} -e^{i\left(\alpha-\frac{\beta}{2}+\frac{\delta}{2}\right)}\sin\frac{\gamma}{2}; e^{i\left(\alpha+\frac{\beta}{2}-\frac{\delta}{2}\right)}\sin\frac{\gamma}{2} e^{i\left(\alpha+\frac{\beta}{2}+\frac{\delta}{2}\right)}\cos\frac{\gamma}{2}l}
+\eeq
+We claim that this is a unitary matrix for real numbers $\alpha$, $\beta$, $\gamma$ and $\delta$. In order to prove this, we first find the adjoint of $U$, which is simply the conjugate transpose.
+\beq
+\adj{U} = \mymtx{e^{-i\left(\alpha-\frac{\beta}{2}-\frac{\delta}{2}\right)}\cos\frac{\gamma}{2} e^{-i\left(\alpha+\frac{\beta}{2}-\frac{\delta}{2}\right)}\sin\frac{\gamma}{2}; -e^{-i\left(\alpha-\frac{\beta}{2}+\frac{\delta}{2}\right)}\sin\frac{\gamma}{2} e^{-i\left(\alpha+\frac{\beta}{2}+\frac{\delta}{2}\right)}\cos\frac{\gamma}{2}l}
+\eeq
+Now, we compute $U\adj{U}$.
+\begin{align}
+U\adj{U} &= \mymtx{e^{i\left(\alpha-\frac{\beta}{2}-\frac{\delta}{2}\right)}\cos\frac{\gamma}{2} -e^{i\left(\alpha-\frac{\beta}{2}+\frac{\delta}{2}\right)}\sin\frac{\gamma}{2}; e^{i\left(\alpha+\frac{\beta}{2}-\frac{\delta}{2}\right)}\sin\frac{\gamma}{2} e^{i\left(\alpha+\frac{\beta}{2}+\frac{\delta}{2}\right)}\cos\frac{\gamma}{2}l}\mymtx{e^{-i\left(\alpha-\frac{\beta}{2}-\frac{\delta}{2}\right)}\cos\frac{\gamma}{2} e^{-i\left(\alpha+\frac{\beta}{2}-\frac{\delta}{2}\right)}\sin\frac{\gamma}{2}; -e^{-i\left(\alpha-\frac{\beta}{2}+\frac{\delta}{2}\right)}\sin\frac{\gamma}{2} e^{-i\left(\alpha+\frac{\beta}{2}+\frac{\delta}{2}\right)}\cos\frac{\gamma}{2}l}\\
+&= \mymtx{\cos^2\frac{\gamma}{2}+\sin^2\frac{\gamma}{2} e^{-i\beta}\cos\frac{\gamma}{2}\sin\frac{\gamma}{2}-e^{-i\beta}\sin\frac{\gamma}{2}\cos\frac{\gamma}{2}; e^{i\beta}\sin\frac{\gamma}{2}\cos\frac{\gamma}{2}-e^{i\beta}\cos\frac{\gamma}{2}\sin\frac{\gamma}{2} \sin^2\frac{\gamma}{2}+\cos^2\frac{\gamma}{2}l}\\
+&= \mymtx{1 0;0 1l}\\
+&= I
+\end{align}
+Hence, $U\adj{U} = I$. In other words, $\adj{U} = U^{-1}$. This is exactly the definition of a unitary matrix. Recalling that $U$ was made up of the three smaller matrices with a global phase in \eqref{eq:toprove} we have shown that any 2x2 unitary matrix can be written as a product of rotations in the z and y axes plus a global phase shift.
+
+More generally, for two non-parallel real unit vectors $\hat{m}$ and $\hat{n}$, one may write
+\beq
+U = e^{i\alpha}R_{\hat{n}}(\beta)R_{\hat{m}}(\gamma)R_{\hat{n}}(\delta)
+\eeq
+for some $\alpha$, $\beta$, $\gamma$ and $\delta$.

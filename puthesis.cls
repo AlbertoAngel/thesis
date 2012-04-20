@@ -50,7 +50,8 @@
 \bodyspacing
 \frontmatter\maketitlepage\makecopyrightpage\makeabstract
 \makeacknowledgements\makededication\maketoc
-\makelot\clearpage\makelof\clearpage\makelos
+%\makelot\clearpage
+\makelof\clearpage\makelos
 \clearpage\mainmatter
 }
 \def\@submitted{\@submittedmonth~\@submittedyear}

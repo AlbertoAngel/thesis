@@ -86,7 +86,7 @@ R_{\hat{n}}(\theta) \equiv \exp{-i\theta \frac{n_xX + n_yY + n_zZ}{2}} = \cos\le
 
 The rotation matrices $R_x$, $R_y$ and $R_z$ result in rotations about the $x$, $y$, and $z$ axes respectively on the Bloch sphere. 
 
-Without proof, we present a very useful way of representing unitary operator matrices below. Any unitary operator $U$ can be represented by a matrix which is a product of rotations in the y and z axes plus a global phase. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
+We present a very useful way of representing unitary operator matrices below. Any unitary operator $U$ can be represented by a matrix which is a product of rotations in the y and z axes plus a global phase. Appendix \ref{ch:proofunitarytorot} proves this relation.
 \begin{align}
 \label{eq:unitarytosinglerot}
 U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\ 
@@ -98,11 +98,18 @@ U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\
 0 & e^{i\delta/2}\end{array}\right]
 \end{align}
 
-Yet another representation of a unitary operator matrix which follows from above is shown here without proof. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
+Yet another representation of a unitary operator matrix which follows from above is shown below.
 \beq
 U = \exp{i\alpha}AXBXC
 \label{eq:unitarytosingle}
 \eeq
+The proof follows from \eqref{eq:unitarytosinglerot} by making the following substitutions.
+\begin{align}
+A &\equiv R_z\left(\beta\right)R_y\left(\frac{\gamma}{2}\right)\\
+B &\equiv R_y\left(-\frac{\gamma}{2}\right)R_z\left(-\frac{\delta + \beta}{2}\right)\\
+C &\equiv R_z\left(\frac{\delta - \beta}{2}\right)
+\end{align}
+
 In the above representation, $A,B$ and $C$ are unitary themselves and $ABC = I$.
 These representations will be important as we define controlled operations using multiple qubits in the next section. One additional set of identities that we need to keep in mind is the following. The proofs for these are straightforward substitutions and are not shown here.
 \beq
