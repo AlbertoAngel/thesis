@@ -139,6 +139,7 @@
   }
   {\end{list}}
 
+\newcommand{\ketp}{|\psi\rangle}
 \newcommand{\ket}[1]{|#1\rangle}
 \newcommand{\tket}[1]{$|#1\rangle$}
 \newcommand{\bra}[1]{\langle#1|}
@@ -163,6 +164,14 @@
 \newcommand{\opX}{\boldsymbol X}
 \newcommand{\opa}{\boldsymbol a}
 \newcommand{\opaa}{\boldsymbol a^{\dagger}}
+\let\oldsqrt\sqrt
+\def\sqrt{\mathpalette\DHLhksqrt}
+\def\DHLhksqrt#1#2{%
+\setbox0=\hbox{$#1\oldsqrt{#2\,}$}\dimen0=\ht0
+\advance\dimen0-0.2\ht0
+\setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Front-matter
 % For early drafts, you may want to disable some of the frontmatter. Simply change this to "\ifodd 1" to do so.

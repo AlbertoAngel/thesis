@@ -14,7 +14,7 @@ for afile in files:
             lines = [i.replace(" "," & ") for i in lines]
             rowcount = len(lines)
             columncount = lines[0].count("&") + 1
-            origcontents = origcontents[:startindex - len(matrixtrigger) - 2] + "\\left[\\begin{array}{" + "c"*columncount + "}" + "\\\\\n".join(lines) + "\end{array}\\right]" + origcontents[endindex+len(endtrigger):]
+            origcontents = origcontents[:startindex - len(matrixtrigger) - 2] + "\\left[\\begin{array}{" + "c"*columncount + "}" + "\\\\\n".join(lines) + "\\end{array}\\right]" + origcontents[endindex+len(endtrigger):]
         except:
             break
     newfile = afile.replace("orig","")

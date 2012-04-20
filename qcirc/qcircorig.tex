@@ -1,15 +1,46 @@
 \chapter{Quantum circuits\label{ch:qcirc}}
 
+Classical computers use bits to represent information for computation. A bit can take on only one value at a time from a choice of two permitted values. For example, a bit 1 may be used to encode the information ``turned on'' while the bit 0 may be used to represent ``turned off.'' A string of bits can be used to represent large chunks of information for computation. The study of computer architecture begins with a botton-up approach in which bits are studied first, followed by bit operations leading to more complicated circuitry for manipulating bits. We follow a similar approach here. We will explain the most fundamental components of a quantum computer starting with the most basic element, the qubit.
+
 \section{The qubit}
+Qubits are the most fundamental elements of a quantum computer. They correspond to their classical computer counterparts known as bits. The most important difference between qubits and classical bits is the idea of quantum superposition -- while a bit is limited to two values (say 0 and 1), a qubit can be in a state that consists of some component of either 0 and 1. 
+
+The appropriate notation for a qubit is through the use of bras and kets in Dirac notation. The wave function of a qubit is given by
+
+\beq
+\label{eq:qubitdef}
+\ketp = \alpha\ket{0} + \beta\ket{1}
+\eeq
+where $\ket{0}$ and $\ket{1}$ are the \textit{computational basis states}. These two states are essentially the quantum analogues of classical bits. In \eqref{eq:qubitdef}, $\alpha$ and $\beta$ are complex numbers. 
+
+Classical bits can be measured for their information content without any effect on that information. A classical bit with a value of 1 can be measured to indicate this value. Following the measurement, the bit will remain in the same \textit{state} before measurement. A qubit differs from this significantly. Since the state of a qubit is described by a wave function as shown in \eqref{eq:qubitdef}, its measured value is predicted by quantum mechanics to be either $\ket{0}$ or $\ket{1}$ with probability $|\alpha|^2$ or $|\beta|^2$. For that reason, the coefficients $\alpha$ and $\beta$ are the \textit{probability amplitudes} of $\ketp$.
+
+Despite this strange behavior of qubits, they exist in nature and can be implemented using several methods. For instance, in chapter \ref{ch:optimp} we realize qubits using photons. Active areas of research in qubit implementation study several schemes including ion traps, electron spins and NMR \cite{nielsen2000}. 
 
 \section{Bloch sphere interpretation of the qubit}
+We have discussed the meaning of the probability amplitudes in the qubit wave function defined in \eqref{eq:qubitdef}. Because the probabilities must sum to one, we have the following constraint.
+\beq
+|\alpha|^2 + |\beta|^2 = 1
+\eeq
+This results in a geometrical interpretation of the qubit. Because $\alpha$ and $\beta$ are complex numbers, the wave function of a qubit may be rewritten as
+\begin{align}
+\ketp &= e^{i\gamma}\cos\frac{\theta}{2}\ket{0} + e^{i(\gamma + \varphi)}\sin\frac{\theta}{2}\ket{1}\\
+&= e^{i\gamma}\left(\cos\frac{\theta}{2}\ket{0} + e^{i\varphi}\sin\frac{\theta}{2}\ket{1}\right)
+\end{align}
+for some real numbers $\gamma$, $\theta$ and $\varphi$. Here, note that there is a global phase shift which produces no observable effects. We will ignore it and instead write the qubit as
+\beq
+\label{eq:gqubitdef}
+\ketp = \cos\frac{\theta}{2}\ket{0} + e^{i\varphi}\sin\frac{\theta}{2}\ket{1}
+\eeq
+\myfig[height=8cm,width=8cm]{qcirc/fig/blochsphere.png}{Bloch sphere interpretation of a qubit}{fig:bsqubit}
+This representation of a qubit results in a mapping with the unit sphere. The qubit in \eqref{eq:gqubitdef} is located at the point $(1,\theta,\varphi)$ on the unit sphere in spherical coordinates. This unit sphere is named the \textit{Bloch sphere} after the name of its discoverer. The Bloch sphere is an excellent way of visualizing single qubit states. It is shown in figure \ref{fig:bsqubit}. Sadly, it cannot be used to visualize multiple qubit systems. However, in section \ref{sec:singlequbitops}, we introduce operations on single qubits and visualize the changes that they cause with the help of the Bloch sphere.
 
-\section{Single qubit operations}
+\section{Single qubit operations\label{sec:singlequbitops}}
 Operations on a qubit must preserve the norm of the qubit, i.e., given an operation $O$ on a single qubit and two qubits $\ket{\psi} = a\ket{0} + b\ket{1}$ and $\ket{\psi'} = O\ket{\psi} = a'\ket{0} + b'\ket{1}$, the normalization conditions
 \beq
 a^2 + b^2 = a'^2 + b'^2 = 1
 \eeq
-must hold. For this reason, operators on single qubits are 2x2 unitary matrices. 
+must hold. For this reason, operators on single qubits are 2x2 unitary matrices. A unitary matrix $U$ has the defining property $\adj{U}U = U\adj{U} = I$ where $\adj{U}$ is the adjoint of $U$. 
 
 The most common single qubit operations are represented by the Pauli matrices.  The Pauli matrices are shown below. 
 
@@ -21,6 +52,12 @@ Three other matrices that are commonly used in quantum computing are the Hadamar
 \beq
 H \equiv \frac{X+Z}{\sqrt{2}} = \frac{1}{\sqrt{2}}\mymtx{1 1;1 -1l} \text{ ; } T \equiv \mymtx{1 0;0 exp(i\pi/4)l} \text{ ; } S \equiv T^2 = \mymtx{1 0;0,il}
 \eeq
+Incidentally, the Hadamard gate is also known as the ``square root of NOT'' gate because it maps $\ket{0}$ to $(\ket{0} + \ket{1})/\sqrt{2}$ and $\ket{0}$ to $(\ket{0} - \ket{1})/\sqrt{2}$, both of which are ``halfway'' between $\ket{0}$ and $\ket{1}$. We can visualize the operation of the Hadamard gate in two steps: 
+\begin{enumerate}
+\item Rotate the qubit vector in the Bloch sphere about the y axis by 90$^{\circ}$ and
+\item Rotate the new qubit vector in the Bloch sphere about the x axis by 180$^{\circ}$
+\end{enumerate}
+The final vector represents the output of the Hadamard gate.
 
 In Appendix \ref{ch:expmtx}, we have shown how to exponentiate matrices. Using these results, we now introduce three additional unitary matrices known as \textit{rotation matrices} corresponding to the Pauli matrices. These are shown below.
 
@@ -38,10 +75,16 @@ In general, the rotation by $\theta$ about an axis defined by the real unit vect
 R_{\hat{n}}(\theta) \equiv \exp{-i\theta \frac{n_xX + n_yY + n_zZ}{2}} = \cos\left(\frac{\theta}{2}\right)I - i\sin\left(\frac{\theta}{2}\right)(n_xX + n_yY + n_zZ)
 \eeq
 
+The rotation matrices $R_x$, $R_y$ and $R_z$ result in rotations about the $x$, $y$, and $z$ axes respectively on the Bloch sphere. 
+
 Without proof, we present a very useful way of representing unitary operator matrices below. Any unitary operator $U$ can be represented by a matrix which is a product of rotations in the y and z axes plus a global phase. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
-\beq
-U = \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)
-\eeq
+\begin{align}
+\label{eq:unitarytosinglerot}
+U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\ 
+&= e^{i\alpha}\mymtx{e^{-i\beta/2} 0 ; 0 e^{i\beta/2}l}
+\mymtx{\cos\frac{\gamma}{2} -\sin\frac{\gamma}{2} ; \sin\frac{\gamma}{2} \cos\frac{\gamma}{2}l} 
+\mymtx{e^{-i\delta/2} 0 ; 0 e^{i\delta/2}l}
+\end{align}
 
 Yet another representation of a unitary operator matrix which follows from above is shown here without proof. Interested readers are pointed to reference \cite{nielsen2000} for a detailed proof.
 \beq
@@ -53,7 +96,6 @@ These representations will be important as we define controlled operations using
 \beq
 HXH = Z \text{ ; } HYH = -Y \text{ ; } HZH = X
 \eeq
-
 Figure \ref{fig:singlequbitgates} summarizes all the single qubit gates and shows their circuit notations.
 
 \myfig[scale=0.50]{qcirc/fig/singlequbitgates.png}{Single-qubit gates and their circuit notations}{fig:singlequbitgates}
@@ -61,6 +103,20 @@ Figure \ref{fig:singlequbitgates} summarizes all the single qubit gates and show
 \section{Multiple qubits and controlled operations}
 So far, we have talked about operations on single qubits. We now discuss a class of families on multiple qubits known as \textit{controlled operations}. In particular, we will discuss two-qubit controlled operations. These discussions can intuitively be generalized for larger numbers of qubits.
 
+\subsection{Multiple qubits}
+Before discussing the operations, let us introduce the concept of multiple qubits. We introduced single qubits by discussing their classical counterparts. We saw that given the computational basis composed of two states, the general qubit wavefunction in \eqref{eq:qubitdef} is a superposition of these states with the appropriate probability amplitudes. We will introduce multiple qubits in a similar fashion. Consider two classical qubits. They can be combined to form four classical possibilities: 00, 01, 10 and 11. Measurement will reveal one of these four possible states. Given two qubits, the wave function of their combination is given by
+\beq
+\ketp = \alpha_{00}\ket{00} + \alpha_{01}\ket{01} + \alpha_{10}\ket{10} + \alpha_{11}\ket{11}
+\eeq
+such that
+\beq
+|\alpha_{00}|^2 + |\alpha_{01}|^2 + |\alpha_{10}|^2 + |\alpha_{11}|^2 = 1
+\eeq
+Following measurement, the wave function will collapse to one of the four states with its respective probability.
+
+Generally, given $n$ qubits, there are $2^n$ states in the computational basis with $2^n$ corresponding probability amplitudes. Therefore, using 500 qubits, we can theoretically encode the state of all atoms in the universe!
+
+\subsection{Controlled operations}
 The simplest controlled operation is the controlled version of the classical \textsc{NOT} gate, known as the \textsc{CNOT} gate. It operates on two qubits known as the \textit{control qubit} and the \textit{target qubit}. Its operation is described as follows: if the control qubit is set (to \tket{1}), then the target qubit is inverted (from \tket{0} to \tket{1} and vice versa). The shorthand notation for the \textsc{CNOT} gate is given below.
 
 \beq

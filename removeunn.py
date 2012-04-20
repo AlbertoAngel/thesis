@@ -7,10 +7,8 @@ for afile in files:
     endindices = []
     for i in xrange(len(lines)):
         if "\\beq" in lines[i] or "\\begin{align}" in lines[i]:
-            triggeron = True
             startindices.append(i)
         elif "\\eeq" in lines[i] or "\\end{align}" in lines[i] or "\\end{align*}" in lines[i]:
-            triggeron = False
             endindices.append(i)
 
     for start,end in zip(startindices,endindices):
