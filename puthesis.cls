@@ -88,7 +88,7 @@
     Recommended for Acceptance \\
     by the \@deptpref \\
     \@dept \\
-    Adviser: \@adviser
+    Advisers: \@adviser
   \end{center}
   \vspace{.3in}
   \extravspace{.3in}

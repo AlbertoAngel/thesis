@@ -39,6 +39,11 @@ Hence,
 Ba\adj{B} &= e^{\theta G}ae^{-\theta G}\\
 &= \sum\limits_{n=0}^\infty \frac{\theta^n}{n!}C_n\\
 &= \sum\limits_{n = even} \frac{(i\theta)^n}{n!}a + i\sum\limits_{n = odd}^\infty \frac{(i\theta)^n}{n!}b\\
-&= a\cos\theta + b\sin\theta
+&= a\cos\theta + b\sin\theta \qed
 \end{align}
-Similarly, $Bb\adj{B} = -a\sin\theta + b\cos\theta$.$\qed$
+Similarly, 
+\begin{align}
+Bb\adj{B} &= -a\sin\theta + b\cos\theta\\
+B\adj{a}\adj{B} &= \adj{a}\cos\theta + \adj{b}\sin\theta\\
+B\adj{b}\adj{B} &= -\adj{a}\sin\theta + \adj{b}\cos\theta
+\end{align}

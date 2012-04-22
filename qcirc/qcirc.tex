@@ -5,7 +5,7 @@ Classical computers use bits to represent information for computation. A bit can
 \section{The qubit}
 Qubits are the most fundamental elements of a quantum computer. They correspond to their classical computer counterparts known as bits. The most important difference between qubits and classical bits is the idea of quantum superposition -- while a bit is limited to two values (say 0 and 1), a qubit can be in a state that consists of some component of either 0 and 1. 
 
-The appropriate notation for a qubit is through the use of bras and kets in Dirac notation. The wave function of a qubit is given by
+The most popular notation for a qubit is through the use of bras and kets following Dirac notation. In this way, the wave function of a qubit is given by
 
 \beq
 \label{eq:qubitdef}
@@ -13,7 +13,7 @@ The appropriate notation for a qubit is through the use of bras and kets in Dira
 \eeq
 where $\ket{0}$ and $\ket{1}$ are the \textit{computational basis states}. These two states are essentially the quantum analogues of classical bits. In \eqref{eq:qubitdef}, $\alpha$ and $\beta$ are complex numbers. 
 
-Classical bits can be measured for their information content without any effect on that information. A classical bit with a value of 1 can be measured to indicate this value. Following the measurement, the bit will remain in the same \textit{state} before measurement. A qubit differs from this significantly. Since the state of a qubit is described by a wave function as shown in \eqref{eq:qubitdef}, its measured value is predicted by quantum mechanics to be either $\ket{0}$ or $\ket{1}$ with probability $|\alpha|^2$ or $|\beta|^2$. For that reason, the coefficients $\alpha$ and $\beta$ are the \textit{probability amplitudes} of $\ketp$.
+Classical bits can be measured for their information content without any effect on that information. A classical bit with a value of 1 can be measured to indicate this value. Following the measurement, the bit will remain in the same \textit{state} before measurement. A qubit differs from this significantly. Since the state of a qubit is described by a wave function as shown in \eqref{eq:qubitdef}, its measured value is predicted by quantum mechanics to be either $\ket{0}$ or $\ket{1}$ with probability $|\alpha|^2$ or $|\beta|^2$ respectively. For that reason, the coefficients $\alpha$ and $\beta$ are the \textit{probability amplitudes} of $\ketp$.
 
 Despite this strange behavior of qubits, they exist in nature and can be implemented using several methods. For instance, in chapter \ref{ch:optimp} we realize qubits using photons. Active areas of research in qubit implementation study several schemes including ion traps, electron spins and NMR \cite{nielsen2000}. 
 

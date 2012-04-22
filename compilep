@@ -1,0 +1,5 @@
+#pdflatex thesis.tex && bibtex thesis && pdflatex thesis.tex && pdflatex thesis.tex && evince thesis.pdf
+cd ~/courses/thesis/thesis
+python replacematrices.py qcirc/qcircorig.tex optimp/optimporig.tex qmech/qmechorig.tex appendices/proofunitarytorotorig.tex
+#python removeunn.py qcirc/qcirc.tex optimp/optimp.tex qmech/qmech.tex
+pdflatex thesisp && bibtex thesisp && pdflatex thesisp && pdflatex thesisp

@@ -19,8 +19,8 @@
 \copyrightyear{2012}
 \author{Abraham Tibebu Asfaw}
 \adviser{Professor Bruce Liby\\Professor Chester Nisteruk}
-\departmentprefix{Departments of}
-\department{Electrical and Computer Engineering \\and Physics}
+\departmentprefix{Department of}
+\department{Electrical and Computer Engineering}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Tweak float placements
@@ -164,7 +164,6 @@
 \newcommand{\opX}{\boldsymbol X}
 \newcommand{\opa}{\boldsymbol a}
 \newcommand{\opaa}{\boldsymbol a^{\dagger}}
-\newcommand{\textunder}[2]{\underbrace{#1}_{\hbox{\small #2}}}
 \let\oldsqrt\sqrt
 \def\sqrt{\mathpalette\DHLhksqrt}
 \def\DHLhksqrt#1#2{%
@@ -176,7 +175,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Front-matter
 % For early drafts, you may want to disable some of the frontmatter. Simply change this to "\ifodd 1" to do so.
-\ifodd 0
+\ifodd 1
     % front-matter disabled while writing chapters
     \renewcommand{\maketitlepage}{}
     \renewcommand*{\makecopyrightpage}{}
@@ -191,7 +190,7 @@
         \input{acknowledgements}
     }
 
-    \dedication{To R.P. Feynman, whose remarkable imagination brought the world's attention to quantum computers}
+    \dedication{To R.P. Feynman}
 \fi  % disable frontmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -216,7 +215,7 @@
 
 \include{qcirc/qcirc}
 \include{qmech/qmech}
-\include{optimp/optimp}
+%\include{optimp/optimp}
 
 \appendix % all chapters following will be labeled as appendices
 \include{appendices/expmtx}

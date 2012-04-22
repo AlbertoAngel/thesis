@@ -40,12 +40,9 @@ By taking the above features for granted, we have essentially satisfied the firs
 Recall from equation \eqref{eq:unitarytosinglerot} that we can decompose a unitary matrix into rotations and a global phase shift. 
 \begin{align}
 U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\ 
-&= e^{i\alpha}\left[\begin{array}{cc}e^{-i\beta/2} & 0\\
-0 & e^{i\beta/2}\end{array}\right]
-\left[\begin{array}{cc}\cos\frac{\gamma}{2} & -\sin\frac{\gamma}{2}\\
-\sin\frac{\gamma}{2} & \cos\frac{\gamma}{2}\end{array}\right] 
-\left[\begin{array}{cc}e^{-i\delta/2} & 0\\
-0 & e^{i\delta/2}\end{array}\right]
+&= e^{i\alpha}\mymtx{e^{-i\beta/2} 0 ; 0 e^{i\beta/2}l}
+\mymtx{\cos\frac{\gamma}{2} -\sin\frac{\gamma}{2} ; \sin\frac{\gamma}{2} \cos\frac{\gamma}{2}l} 
+\mymtx{e^{-i\delta/2} 0 ; 0 e^{i\delta/2}l}
 \end{align}
 In optics, introducing phase shift is achieved by devices known as retarders. Our focus will be on the implementation of the other factors in the decomposition of a unitary matrix -- the $y$ and $z$ rotations. Once we have these, we can realize single qubit gates. We will then introduce non-linearity using Kerr media to realize multiple qubit gates.
 
@@ -62,8 +59,7 @@ where $\phi$ is the phase shifter angle and $\adj{a}$ and $\adj{b}$ are the crea
 \begin{align}
 P:c_0\ket{0}_L + c_1\ket{1}_L &\rightarrow c_0\ket{0}_L + c_1e^{i\phi}\ket{1}_L \\
 &= e^{i\frac{\phi}{2}}\left(c_0e^{-i\frac{\phi}{2}}\ket{0}_L + c_1e^{i\frac{i\phi}{2}}\ket{1}_L\right)\\
-P &\equiv e^{i\frac{\phi}{2}}\left[\begin{array}{cc}\exp{-i\phi/2} & 0\\
-0 & \exp{i\phi/2}\end{array}\right] = e^{i\frac{\phi}{2}}R_z(\phi)
+P &\equiv e^{i\frac{\phi}{2}}\mymtx{\exp{-i\phi/2} 0;0 \exp{i\phi/2}l} = e^{i\frac{\phi}{2}}R_z(\phi)
 \end{align}
 Hence, up to an irrelevant global phase, a phase shifter realizes rotation in the $z$ axis. A phase shifter is simply drawn as a rectangle with the angle denoting the phase shift that it introduces. For the quantum-mechanically inclined, another way of looking at the phase shifter is its Hamiltonian  below.
 \begin{align}
@@ -88,8 +84,7 @@ In the above equations, we have made use of two facts:
 Hence, the matrix representation for $B$ is derived as follows.
 \begin{align}
 B: c_0\ket{0}_L + c_1\ket{1}_l &\rightarrow c_0(\cos\theta - \sin\theta)\ket{0}_L + c_1(-\sin\theta + \cos\theta)\ket{1}_L \\
-B &\equiv \left[\begin{array}{cc}\cos\theta & -\sin\theta\\
-\sin\theta & \cos\theta\end{array}\right] = e^{i\theta Y} = R_y(-2\theta)
+B &\equiv \mymtx{\cos\theta -\sin\theta;\sin\theta \cos\thetal} = e^{i\theta Y} = R_y(-2\theta)
 \end{align}
 Hence, a beamsplitter can be used to realize rotations in the $y$ axis. There are several notations for a beamsplitter of angle $\theta$. We present a beamsplitter and its adjoint in figure \ref{fig:bs} with angle $\theta = \pi/4$.
 \myfig{optimp/fig/beamsplitter.png}{A beamsplitter and its adjoint acting on modes $a$ and $b$ for $\theta = \pi/4$.}{fig:bs}
@@ -111,9 +106,7 @@ Its operation can be described based on our discussions above as follows.
 \begin{align}
 C:\ket{0}_L &\rightarrow \cos\theta\ket{0}_L + \sin\theta\ket{1}_L\\
 C:\ket{1}_L &\rightarrow -\sin\theta\ket{0}_L + \cos\theta\ket{1}_L \rightarrow \sin\theta\ket{0}_L - \cos\theta\ket{1}_L\\
-C&\equiv \left[\begin{array}{cc}\cos\theta & \sin\theta\\
-\sin\theta & -\cos\theta\end{array}\right] = \frac{1}{\sqrt{2}}\left[\begin{array}{cc}1 & 1\\
-1 & -1\end{array}\right] = H
+C&\equiv \mymtx{\cos\theta \sin\theta;\sin\theta -\cos\thetal} = \frac{1}{\sqrt{2}}\mymtx{1 1;1 -1l} = H
 \end{align}
 Hence, the above circuit acts as a Hadamard gate. Note that the phase shifter only acts on the $\ket{1}_L$ mode. Several other optical circuits can be found in \cite{nielsen2000} and \cite{klm}. The latter uses slightly different notation than the one used here.
 
@@ -160,28 +153,16 @@ K:\ket{e_{11}} &\equiv \ket{0110}\rightarrow -\ket{0110}
 \end{align}
 The Kerr medium acts only on the fourth basis state and leaves all other states as they are. The matrix representation of the Kerr medium shows this clearly.
 \beq
-K= \left[\begin{array}{cccc}1 & 0 & 0 & 0\\
-0 & 1 & 0 & 0\\
-0 & 0 & 1 & 0\\
-0 & 0 & 0 & -1\end{array}\right]
+K= \mymtx{1 0 0 0;0 1 0 0;0 0 1 0;0 0 0 -1l}
 \eeq
 Note that the first two modes have been switched in the above computational basis set from the ones we have previously defined. This can be achieved physically using highly reflective mirrors.
 
 This is a significant achievement, because the matrix representation of the controlled NOT gate can be written as follows.
 \beq
 U_{CN} = 
-\textunder{\frac{1}{\sqrt{2}}\left[\begin{array}{cccc}1 & 1 & 0 & 0\\
-1 & -1 & 0 & 0\\
-0 & 0 & 1 & 1\\
-0 & 0 & 1 & -1\end{array}\right]}{$I\otimes H$}
-\textunder{\left[\begin{array}{cccc}1 & 0 & 0 & 0\\
-0 & 1 & 0 & 0\\
-0 & 0 & 1 & 0\\
-0 & 0 & 0 & -1\end{array}\right]}{$K$}
-\textunder{\frac{1}{\sqrt{2}}\left[\begin{array}{cccc}1 & 1 & 0 & 0\\
-1 & -1 & 0 & 0\\
-0 & 0 & 1 & 1\\
-0 & 0 & 1 & -1\end{array}\right]}{$I\otimes H$}
+\textunder{\frac{1}{\sqrt{2}}\mymtx{1 1 0 0;1 -1 0 0;0 0 1 1;0 0 1 -1l}}{$I\otimes H$}
+\textunder{\mymtx{1 0 0 0;0 1 0 0;0 0 1 0;0 0 0 -1l}}{$K$}
+\textunder{\frac{1}{\sqrt{2}}\mymtx{1 1 0 0;1 -1 0 0;0 0 1 1;0 0 1 -1l}}{$I\otimes H$}
 \eeq
 where $I\otimes H$ is the Hadamard gate which acts on the first two and last two modes separately. It is implemented using two sets of beamsplitters and phase shifters as seen in section \ref{sec:hadamard}. Note that we have set $\chi L = \pi$ for the Kerr medium. Hence, we have shown the theoretical realization of the controlled NOT gate using Kerr media, phase shifters and beamsplitters.
 
