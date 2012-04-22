@@ -2,6 +2,7 @@ cd ~/courses/thesis/thesis
 python replacematrices.py qcirc/qcircorig.tex optimp/optimporig.tex qmech/qmechorig.tex appendices/proofunitarytorotorig.tex
 #python removeunn.py qcirc/qcirc.tex optimp/optimp.tex qmech/qmech.tex
 pdflatex thesis && bibtex thesis && pdflatex thesis && pdflatex thesis
+rm thesis.aux thesis.bbl thesis.blg thesis.lof thesis.log thesis.out thesis.toc
 python updatethesisp.py
 pdflatex thesisp && bibtex thesisp && pdflatex thesisp && pdflatex thesisp
 
