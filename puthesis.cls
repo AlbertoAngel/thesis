@@ -76,7 +76,7 @@
   \vspace{.6in}
   \extravspace{.6in}
   \begin{center}
-    A Dissertation \\
+    A Thesis \\
     Presented to the Faculty \\
     of Manhattan College \\
     in Candidacy for the Degree \\

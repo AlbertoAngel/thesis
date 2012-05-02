@@ -4,9 +4,9 @@ In this chapter, we discuss optical implementations of quantum gates that were d
 \section{What makes a good quantum computer?}
 In chapter \ref{ch:qcirc}, we discussed qubits and some commonly used single and multiple qubit gates. The biggest challenge in realizing quantum computation is that the requirements for feasible implementations are generally opposing: a quantum computer has to be isolated well enough to retain its quantum properties, but at the same time its qubits have to be accessible enough to be manipulated for computation. These two requirements are measured using what is known as ``decoherence time'' $\tau_Q$, ``operation time'' $\tau_{op}$ and the ``maximum number of operations'' $n_{op}$. Various types of quantum systems have been proposed that attempt to find a good balance between these tradeoffs of quantum computation. Crude estimates of the properties of the most popular quantum systems can be found in \cite{nielsen2000} as shown in figure \ref{fig:crudeestimates}. Larger decoherence times usually indicate good isolation from the environment by means of fewer interactions with it, while smaller operation times imply faster unitary operations involving two or more qubits. The figure indicates the tradeoffs in the popular implementations of quantum computing.
 
-\myfig[scale=0.60]{optimp/fig/crude.png}{Crude estimates of ``decoherence time'' $\tau_Q$, ``operation time'' $\tau_{op}$ and ``maximum number of operations'' $n_{op}$ for various implementations of quantum computing. Note that $n_{op} = \lambda^{-1} = \tau_Q/\tau_{op}$.}{fig:crudeestimates} 
+\myfig[scale=0.60]{optimp/fig/crude.png}{Crude estimates of ``decoherence time'' $\tau_Q$, ``operation time'' $\tau_{op}$ and ``maximum number of operations'' $n_{op}$ for various implementations of quantum computing \cite{nielsen2000}. Note that $n_{op} = \lambda^{-1} = \tau_Q/\tau_{op}$.}{fig:crudeestimates} 
 
-Generally, the requirements for a good quantum computing scheme are the following:
+Generally, the requirements for a good quantum computing scheme are the following \cite{divincenzo}:
 \begin{enumerate}\label{requirements}
 \item The scheme must have the ability to robustly represent quantum information
 \item The scheme must have the ability to perform unitary transformations
@@ -16,7 +16,7 @@ Generally, the requirements for a good quantum computing scheme are the followin
 
 In this chapter, we will discuss the optical implementation of quantum computing. We will realize some important quantum gates using optical devices and present the drawbacks to this scheme.
 \section{Optical devices for quantum computing}
-The optical photon is a chargeless particle that does not interact strongly with others or with its surrounding environment. For this reason, photons can be guided for very long distances with very little loss. Fiber optics is essentially an application of this feature of photons. In addition, photons can be delayed using phase shifters and combined using beamsplitters. In principle, photons can also be made to interact with each other by the use of non-linear media. We will consider Kerr media as our non-linear means of creating photon interactions. 
+The optical photon is a chargeless particle that does not interact strongly with other particles or with its surrounding environment. For this reason, photons can be guided for very long distances with very little loss. Fiber optics is essentially an application of this feature of photons. In addition, photons can be delayed using phase shifters and combined using beamsplitters. In principle, photons can also be made to interact with each other by the use of non-linear media. We will consider Kerr media as our non-linear means of creating photon interactions. 
 
 Our method of approach will be as follows: we will first discuss quantum gates as applied to single and multiple qubits. Then, we will discuss the drawbacks of optical quantum computing and directions of current research.
 
@@ -25,12 +25,12 @@ Before discussing the quantum gates, we need to ask one important question. Assu
 Photons will represent our qubits. While we could use polarization to form our computational basis, we will use two electromagnetic cavities with a total energy of $\hbar\omega$, which is a quantum or a photon. Because it is possible for a cavity to contain a superposition of zero or one photon, we have logical basis states from the cavity states related as shown below.
 
 \beq
-\ketp = c_0\ket{0}_L + c_1\ket{1}_L \equiv c_0\ket{01} + c_0\ket{10}
+\ketp = c_0\ket{0}_L + c_1\ket{1}_L \equiv c_0\ket{01} + c_1\ket{10}
 \eeq
 
-This is known as the \textit{dual-rail} representation of the qubit. Each cavity represents a different spatial mode.
+This is known as the \textit{dual-rail} representation of the qubit \cite{nielsen2000}. Each cavity represents a different spatial mode.
 
-We will generate single photons by attenuating the output of a laser. We will not discuss single photon generation in detail, but it suffices to mention that a laser outputs coherent states which can be attenuated to have just one photon with high probability. The interested reader is referred to \cite{foxqoptics} and \cite{milburnqoptics} for techniques of single photon generation such as the aforementioned and parametric down-conversion. 
+We will generate single photons by attenuating the output of a laser. We will not discuss single photon generation in detail, but it suffices to mention that a laser outputs coherent states which can be attenuated to have just one photon with high probability. The interested reader is referred to \cite{foxqoptics} and \cite{milburnqoptics} for popular techniques of single photon generation such as parametric down-conversion. 
 
 Measurement will be done using photon detectors. The interested reader is referred to \cite{foxqoptics} for an excellent discussion of photon detectors.
 
@@ -47,32 +47,32 @@ U &= \exp{i\alpha}R_z(\beta)R_y(\gamma)R_z(\delta)\\
 \left[\begin{array}{cc}e^{-i\delta/2} & 0\\
 0 & e^{i\delta/2}\end{array}\right]
 \end{align}
-In optics, introducing phase shift is achieved by devices known as retarders. Our focus will be on the implementation of the other factors in the decomposition of a unitary matrix -- the $y$ and $z$ rotations. Once we have these, we can realize single qubit gates. We will then introduce non-linearity using Kerr media to realize multiple qubit gates.
+In optics, introducing phase shift can be achieved by devices known as retarders \cite{hechtoptics}. Our focus will be on the implementation of the other factors in the decomposition of a unitary matrix -- the $y$ and $z$ rotations. Once we have these, we can realize single qubit gates. We will then introduce non-linearity using Kerr media to realize multiple qubit gates.
 
 \subsection{Single qubit gates}
 We have already mentioned that a retarder can introduce the global phase shift in the decomposition of a unitary matrix representing a single qubit operator. We begin by addressing the $z$ rotation using a phase shifter.
 
-A effect of a phase shifter is localized only to the modes going through it. In other words, the effect of a phase shifter $P$ can be described as follows.
+A effect of a phase shifter is localized only to the modes going through it \cite{klm}. In other words, the effect of a phase shifter $P$ can be described as follows.
 \begin{align}
 P:\ket{00} &\rightarrow \ket{00}\\
 P:\ket{01} = \adj{a}\ket{00} &\rightarrow \ket{01}\\
 P:\ket{10} = \adj{b}\ket{00} &\rightarrow e^{i\phi}\ket{10}
 \end{align}
-where $\phi$ is the phase shifter angle and $\adj{a}$ and $\adj{b}$ are the creation operators for the two modes representing the photon cavities. This phase shifter model acts on the $b$-mode only. Hence, a phase shifter leaves $\ket{0}_L$ unaffected and adds a phase shift to $\ket{1}_L$. Its matrix representation is found as follows.
+where $\phi$ is the phase shifter angle and $\adj{a}$ and $\adj{b}$ are the creation operators for the two modes representing the photon cavities. This phase shifter model acts on mode $b$ only. Hence, a phase shifter leaves $\ket{0}_L$ unaffected and adds a phase shift to $\ket{1}_L$. Its matrix representation is found as follows.
 \begin{align}
 P:c_0\ket{0}_L + c_1\ket{1}_L &\rightarrow c_0\ket{0}_L + c_1e^{i\phi}\ket{1}_L \\
 &= e^{i\frac{\phi}{2}}\left(c_0e^{-i\frac{\phi}{2}}\ket{0}_L + c_1e^{i\frac{i\phi}{2}}\ket{1}_L\right)\\
 P &\equiv e^{i\frac{\phi}{2}}\left[\begin{array}{cc}\exp{-i\phi/2} & 0\\
 0 & \exp{i\phi/2}\end{array}\right] = e^{i\frac{\phi}{2}}R_z(\phi)
 \end{align}
-Hence, up to an irrelevant global phase, a phase shifter realizes rotation in the $z$ axis. A phase shifter is simply drawn as a rectangle with the angle denoting the phase shift that it introduces. For the quantum-mechanically inclined, another way of looking at the phase shifter is its Hamiltonian  below.
+Hence, up to an irrelevant global phase, a phase shifter realizes rotation in the $z$ axis. A phase shifter is simply drawn as a rectangle with the angle denoting the phase shift that it introduces. For the quantum-mechanically inclined, another way of looking at the phase shifter is its Hamiltonian  below \cite{nielsen2000}.
 \begin{align}
 H_P &= (n_0 - n)Z\\
 P &= \exp{-iH_PL/c_0}
 \end{align}
 In this notation, $n_0$ is the index of refraction of free space, $n$ is the index of refraction of the phase shifter, $Z$ is the Pauli-Z matrix, $c_0$ is the speed of light and $L$ is the distance of propagation in the phase shifter.
 
-Rotations about the $y$ axis are realized using a beamsplitter. We will explain the effect of a beamsplitter $B$ on different states below. Note that a beamsplitter is used to join states in different modes.
+Rotations about the $y$ axis are realized using a beamsplitter. We will explain the effect of a beamsplitter $B$ on different states below. Note that a beamsplitter is used to join states in different modes \cite{klm,nielsen2000}.
 \begin{align}
 B:\ket{00} &\rightarrow \ket{00}\\
 B:\ket{0}_L = \ket{01} = \adj{a}\ket{00} &\rightarrow B\adj{a}\ket{00} = B\adj{a}\adj{B}B\ket{00}\\
@@ -83,7 +83,7 @@ B:\ket{1}_L = \ket{10} = \adj{b}\ket{00} &\rightarrow B\adj{b}\ket{00} = B\adj{b
 In the above equations, we have made use of two facts: 
 \begin{enumerate}
 \item $B$ is a unitary matrix. Hence, $B\adj{B} = \adj{B}B = I$ and
-\item The expressions $B\adj{a}\adj{B}$ and $B\adj{b}\adj{B}$ are simplified using the Baker-Campbell-Hausdorf equation as shown in appendix \ref{ch:bchf}.
+\item The expressions $B\adj{a}\adj{B}$ and $B\adj{b}\adj{B}$ are simplified using the Baker-Campbell-Hausdorf formula as shown in appendix \ref{ch:bchf}.
 \end{enumerate}
 Hence, the matrix representation for $B$ is derived as follows.
 \begin{align}
@@ -127,7 +127,7 @@ n(I) = n + n_2I
 \eeq
 where $I$ is the total intensity of light going through the medium. This is the optical Kerr effect. It is weakly seen in some commonly found materials such as glass. When two beams of light of equal intensity are co-propagated through a medium where the Kerr effect is visible, each beam experiences a phase shift directly proportional to the common intensity. This effect is not highly pronounced because of the usually small values of $n_2$. While one may attempt to increase the propagation distance to compensate for the small value of $n_2$, another challenge is faced: Kerr media are usually absorptive and scatter light out of its mode. For this reason, the methods we will now discuss are challenging to implement in a laboratory setting. Nevertheless, they provide the background required for other media in which the non-linear effect  is more pronounced.
 
-Kerr media provide cross phase modulation between two modes of light. This is seen by the the Hamiltonian of a Kerr medium
+Kerr media provide cross phase modulation between two modes of light \cite{nielsen2000}. This is seen by the the Hamiltonian of a Kerr medium
 \beq
 H_K = -\chi\adj{a}a\adj{b}b
 \eeq
@@ -186,14 +186,13 @@ U_{CN} =
 where $I\otimes H$ is the Hadamard gate which acts on the first two and last two modes separately. It is implemented using two sets of beamsplitters and phase shifters as seen in section \ref{sec:hadamard}. Note that we have set $\chi L = \pi$ for the Kerr medium. Hence, we have shown the theoretical realization of the controlled NOT gate using Kerr media, phase shifters and beamsplitters.
 
 \section{Drawbacks of the optical scheme}
-Our realization of quantum gates is theoretically complete. We generate photons using attenuated lasers and detect them using photodetectors. Single qubit gates can be realized using phase shifters and beam splitters, while multiple qubit gates can be realized using single qubit gates and the controlled NOT gate. So why hasn't a quantum computer been built yet?
+Our realization of quantum gates is theoretically complete. We generate photons using attenuated lasers and detect them using photodetectors \cite{klm,nielsen2000}. Single qubit gates can be realized using phase shifters and beam splitters, while multiple qubit gates can be realized using single qubit gates and the controlled NOT gate implemented by the cross phase modulation of Kerr media. So why hasn't a quantum computer been built yet?
 
 We mentioned that an attractive feature of single photons for quantum computing is that they have minimal interaction with most matter. Unfortunately, photons do not interact among themselves as well. This implies that we will need to introduce non-linear effects such as the Kerr media discussed above. These non-linear effects introduce artifical interaction between the photons and fill the gap needed to realize quantum computing using single photons. 
 
-However, the best Kerr media cannot produce cross phase modulation levels up to $\pi$. Even worse, an attempt to make up for the low cross-phase modulation with a longer propagation distance results in absorption and scattering, which cause additional difficulties later on as we perform our measurements. This disadvantage becomes clear when we realize that approximately 50 photons will be absorbed for each photon cross modulated by an angle $\pi$ \cite{nielsen2000}. 
+However, the best known Kerr media cannot produce cross phase modulation levels up to $\pi$. Even worse, an attempt to make up for the low cross-phase modulation with a longer propagation distance results in absorption and scattering, which cause additional difficulties later on as we perform our measurements. This disadvantage becomes clear when we realize that approximately 50 photons will be absorbed for each photon cross modulated by an angle $\pi$ \cite{nielsen2000}. 
 
 Our study of single photon quantum computing is important because it reveals the features necessary for other implementations. Current research in the area of cavity quantum electrodynamics (cQED) is derived from the results learned in this scheme. In fact, one may think of the cQED scheme as single photon quantum computing with significantly better non-linear media.
 
 Additionally, optical communication will also remain important in the years to come. While single photons may not be good candidates for a scalable quantum architecture, the energy required to transmit photons over optical fibers is significantly smaller than the energy required to transmit charges over a 50-ohm transmission line of the same distance. Therefore, single photon qubits may be essential for quantum communication rather than quantum computation. Active research on quantum communication channels and cryptography will soon reveal this.
-
-~\hfill$\qed$
+~\hfill$\blacksquare$

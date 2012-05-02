@@ -2,7 +2,7 @@
 
 In this appendix, we prove the following.
 \beq
-\exp{iAx} = cos(x)I + isin(x)A
+\exp{iAx} = \cos(x)I + i\sin(x)A
 \eeq
 for a real number $x$ and matrix $A$ such that $A^2 = I$ and $A^0 = I$. Recall the power series expansion for the exponential $\exp{x}$ for all $x$.
 
@@ -25,12 +25,12 @@ Noting that even powers of $A$ reduce to identity and $i^2 = -1$, we now rearran
 The power series expansions for the sine and cosine functions appear in the above equation. We will state the power series expansions for these two functions below.
 
 \begin{align}
-sin(x) &= \sum\limits_{n=0}^{\infty} \left(-1\right)^n\frac{x^{2n+1}}{\left(2n+1\right)!} = \left(\frac{x^1}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \right)\\
-cos(x) &= \sum\limits_{n=0}^{\infty} \left(-1\right)^n\frac{x^{2n}}{\left(2n\right)!} = \left(\frac{x^0}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots \right)
+\sin x &= \sum\limits_{n=0}^{\infty} \left(-1\right)^n\frac{x^{2n+1}}{\left(2n+1\right)!} = \left(\frac{x^1}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \right)\\
+\cos x &= \sum\limits_{n=0}^{\infty} \left(-1\right)^n\frac{x^{2n}}{\left(2n\right)!} = \left(\frac{x^0}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots \right)
 \end{align}
 Therefore,
 
 \begin{align}
 \exp{iAx} &= \left(\frac{x^0}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \ldots \right)I + i\left(\frac{x^1}{1!} - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots \right)A\\
-&= cos(x)I + isin(x)A\qed
+&= \cos(x)I + i\sin(x)A\qed
 \end{align}

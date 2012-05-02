@@ -1,21 +1,28 @@
-\chapter{Quantum Mechanical Analysis of the Harmonic Oscillator\label{ch:qmech}}
+\chapter{Quantum mechanical analysis of the harmonic oscillator\label{ch:qmech}}
 
 \section{Motivation}
 This chapter will provide the necessary background for understanding optical implementations of quantum gates. We introduce relevant operators such as annihilators and creators based on a quantum mechanical description of the harmonic oscillator. The material in this chapter is based on analysis of the harmonic oscillator provided in \cite{goldstein} and \cite{griffiths}. Additional material concerned with annihilators and creators can be found in \cite{klm}.
 
-\section{Creation and Annihilation Operators\label{annihilators}}
+\section{Creation and annihilation operators\label{annihilators}}
 
-In quantum mechanics, physical observables are represented by Hermitian operators that have real eigenvalues. We represent operators with boldface symbols throughout the chapter. The Hamiltonian of a one-dimensional harmonic oscillator is given below.
+In linear algebra, the eigenvalues $\Omega$ and eigenvectors $\ket{\Omega}$ of an operator $\boldsymbol O$ are related as follows \cite{linalg}.
+\beq
+\boldsymbol O\ket{\Omega} = \Omega\ket{\Omega}
+\eeq
+For real eigenvalues $\Omega$, this essentially means that the effect of the operator $\boldsymbol O$ on its eigenvectors $\ket{\Omega}$ is scaling by a factor of $\Omega$. For complex eigenvalues $\Omega$, the eigenvector $\ket{\Omega}$ is scaled and rotated by the magnitude and phase angle of $\Omega$ respectively. 
+
+In quantum mechanics, physical observables are represented by Hermitian operators that have real eigenvalues \cite{griffiths, linalg}. Recall that a Hermitian operator $\opH$ has the property that $\adj{\opH} = \opH$. We represent operators with boldface symbols throughout the chapter. The Hamiltonian of a one-dimensional harmonic oscillator is given below.
 \beq
 \opH = \frac{\opp^2}{2m} + \frac{1}{2}K\opx^2
 \eeq
-In addition, the commutator relationship $[\opx,\opp]$ relates the two physical observables in the above equation. The first term in the Hamiltonian is the kinetic energy, and the second is the potential energy. Thus, the Hamiltonian is the total energy of the system. The normalized position and momentum operators are
+In addition, the commutator relationship $[\opx,\opp]$ relates the two physical observables in the above equation. The first term in the Hamiltonian is the kinetic energy, and the second is the potential energy. Thus, the Hamiltonian is the total energy of the system \cite{griffiths}. The normalized position and momentum operators are
 \begin{align}
 \opX &= \sqrt{\frac{K}{\hbar\omega_0}}\opx\\
 \opP &= \frac{\opp}{\sqrt{m\hbar\omega_0}}
 \end{align}
 where $\omega_0 = \sqrt{\frac{K}{m}}$. The Hamiltonian expressed in terms of these normalized operators becomes
 \beq
+\label{eq:hamiltonianxp}
 \opH = \frac{\hbar\omega_0}{2}\left(\opP^2 + \opX^2\right)
 \eeq
 with a new commutator relationship $[\opX,\opP] = j$. We introduce the non-Hermitian annihilator $\opa$ and its adjoint $\opaa$ as
@@ -46,6 +53,12 @@ Since $\opN$ is Hermitian, it has orthonormal eigenvectors and real eigenvalues.
 \beq
 \braket{m}{n} = \delta_{mn}
 \eeq
+where $$
+\delta_{mn} = \left\{ \begin{array}{rl}
+1 &\mbox{ if $m = n$} \\
+0 &\mbox{ otherwise}
+\end{array} \right.
+$$
 The annihilation operator and its adjoint have special effects on the Fock states \cite{griffiths}.
 \begin{align}
 \opa\ket{n} &= \sqrt{n}\ket{n-1}\\
@@ -61,28 +74,43 @@ Since the ground state has energy $\frac{\hbar\omega_0}{2}$ with each additional
 \opH\ket{n} = E_n\ket{n} = \hbar\omega_0\left(n + \frac{1}{2}\right)
 \eeq
 where $E_n$ is the energy eigenvalue corresponding to the Fock state $\ket{n}$.
-\section{Matrix Elements of the Creation and Annihilation Operators}
+\section{Matrix elements of the creation and annihilation operators}
 In this section, we will investigate the elements of the matrices that represent the annihilation and creation operators. From \eqref{eq:acdef}, we have
 \begin{align}
-\opX &= \frac{1}{\sqrt{2}}\left(\adj{a} + a\right)\\
-\opP &= \frac{j}{\sqrt{2}}\left(\adj{a} - a\right)
+\label{eq:xaaa}
+\opX &= \frac{1}{\sqrt{2}}\left(\opaa + \opa\right)\\
+\label{eq:paaa}
+\opP &= \frac{j}{\sqrt{2}}\left(\opaa - \opa\right)
 \end{align}
-For Fock states $\ket{m}$ and $\ket{n}$, we now derive a series of relations that reveal the matrix elements of the annihilation and creation operators. Note that for an operator $O$, $\bra{m}O\ket{n}$ is the element $O_{mn}$ of the matrix representation of $O$.
+For Fock states $\ket{m}$ and $\ket{n}$, we now derive a series of relations that reveal the matrix elements of the annihilation and creation operators. Note that for an operator $\boldsymbol O$, $\bra{m}\boldsymbol O\ket{n}$ is the element $O_{mn}$ of the matrix representation of $\boldsymbol O$.
+
 \begin{align}
-\bra{m}\opa\ket{n} &= \sqrt{n}\braket{m}{n-1} = \sqrt{n}\delta_{m,n-1}\\ 
+\bra{m}\opa\ket{n} &= \sqrt{n}\braket{m}{n-1} = \sqrt{n}\delta_{m,n-1}\\
 \bra{m}\opaa\ket{n} &= \sqrt{n+1}\braket{m}{n+1} = \sqrt{n+1}\delta_{m,n+1}\\ 
 \bra{m}\opaa\opa\ket{n} &= n\braket{m}{n} = n\delta_{m,n}\\ 
 \bra{m}\opa\opaa\ket{n} &= \left(n+1\right)\braket{m}{n} = \left(n+1\right)\delta_{m,n}\\ 
-\bra{m}\opX\ket{n} &= \bra{m}\frac{1}{\sqrt{2}}\left(\adj{a} + a\right)\ket{n} = \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} + \sqrt{n}\delta_{m,n-1}\right)\\ 
-\bra{m}\opP\ket{n} &= \bra{m}\frac{j}{\sqrt{2}}\left(\adj{a} - a\right)\ket{n} = \frac{j}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} - \sqrt{n}\delta_{m,n-1}\right)\\ 
-\bra{m}\opa^2\ket{n} &= \sqrt{n}\bra{m}\opa\ket{n-1} = \sqrt{n(n-1)}\braket{m}{n-2} = \sqrt{n(n-1)}\delta_{m,n-2}\\ 
-\bra{m}\left(\opaa\right)^2\ket{n} &= \sqrt{n+1}\bra{m}\opaa\ket{n+1} = \sqrt{(n+1)(n+2)}\braket{m}{n+2}\\
-&= \sqrt{(n+1)(n+2)}\delta_{m,n+2}\\
-\bra{m}\opX^2\ket{n} &= \bra{m}\frac{1}{2}\left(\left(\opaa\right)^2 + \opaa\opa + \opa\opaa + \opa^2\right)\ket{n}\\
-&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + n\delta_{m,n} + (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
-&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
-\bra{m}\opP^2\ket{n} &= \bra{m}-\frac{1}{2}\left(\left(\opaa\right)^2 - \opaa\opa - \opa\opaa + \opa^2\right)\ket{n}\\
-&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - n\delta_{m,n} - (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
-&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
-&= \frac{1}{2}\left(-\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} - \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+\bra{m}\opX\ket{n} &= \bra{m}\frac{1}{\sqrt{2}}\left(\opaa + \opa\right)\ket{n} = \frac{1}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} + \sqrt{n}\delta_{m,n-1}\right)\\ 
+\bra{m}\opP\ket{n} &= \bra{m}\frac{j}{\sqrt{2}}\left(\opaa - \opa\right)\ket{n} = \frac{j}{\sqrt{2}}\left(\sqrt{n+1}\delta_{m,n+1} - \sqrt{n}\delta_{m,n-1}\right)\\ 
+\bra{m}\opa^2\ket{n} &= \sqrt{n}\bra{m}\opa\ket{n-1} = \sqrt{n(n-1)}\braket{m}{n-2}\notag\\
+&= \sqrt{n(n-1)}\delta_{m,n-2}\\ 
+\bra{m}\left(\opaa\right)^2\ket{n} &= \sqrt{n+1}\bra{m}\opaa\ket{n+1} = \sqrt{(n+1)(n+2)}\braket{m}{n+2}\notag\\
+&= \sqrt{(n+1)(n+2)}\delta_{m,n+2}
 \end{align}
+Using the above results, the matrices for $\opa$ and $\opaa$ are shown below.
+\beq
+\opa = \mymtx{0 \sqrt{1} 0 0 \ldots;0 0 \sqrt{2} 0 \ldots;0 0 0 \sqrt{3} \ldots;\vdots \vdots \vdots \vdots \ddotsl} ~ \opaa = \mymtx{0 0 0 \ldots;\sqrt{1} 0 0 \ldots;0 \sqrt{2} 0 \ldots;0 0 \sqrt{3} \ldots;\vdots \vdots \vdots \ddotsl}
+\eeq
+We can now use equations \eqref{eq:hamiltonianxp}, \eqref{eq:xaaa} and \eqref{eq:paaa} to determine the matrix elements of the Hamiltonian operator $H$ as follows.
+\begin{align}
+\bra{m}\opX^2\ket{n} &= \bra{m}\frac{1}{2}\left(\left(\opaa\right)^2 + \opaa\opa + \opa\opaa + \opa^2\right)\ket{n}\notag\\
+&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + n\delta_{m,n} + (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\notag\\
+&= \frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+\bra{m}\opP^2\ket{n} &= \bra{m}-\frac{1}{2}\left(\left(\opaa\right)^2 - \opaa\opa - \opa\opaa + \opa^2\right)\ket{n}\notag\\
+&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - n\delta_{m,n} - (n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\notag\\
+&= -\frac{1}{2}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} - (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\notag\\
+&= \frac{1}{2}\left(-\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} - \sqrt{n(n-1)}\delta_{m,n-2}\right)\\
+\bra{m}\opH\ket{n} &= \bra{m}\frac{\hbar\omega_0}{2}\left(\opX^2 + \opP^2\right)\ket{n}\notag\\
+&= \frac{\hbar\omega_0}{4}\left(\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} + \sqrt{n(n-1)}\delta_{m,n-2}\right)\notag\\
+&+ \frac{\hbar\omega_0}{4}\left(-\sqrt{(n+1)(n+2)}\delta_{m,n+2} + (2n+1)\delta_{m,n} - \sqrt{n(n-1)}\delta_{m,n-2}\right)
+\end{align}
+~\hfill$\blacksquare$
