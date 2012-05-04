@@ -1,0 +1,3511 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[    145023,       3502]
+NotebookOptionsPosition[    143679,       3459]
+NotebookOutlinePosition[    144093,       3475]
+CellTagsIndexPosition[    144050,       3472]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<Quantum`Computing`\>\"", "]"}]], "Input"],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"circuitexpr", " ", ":=", " ", 
+  SubscriptBox["\[ScriptCapitalH]", 
+   OverscriptBox["1", "^"]]}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot3D", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"QuantumEvaluate", "[", "circuitexpr", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"QuantumTableForm", "[", "circuitexpr", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumMatrixForm", "[", "circuitexpr", "]"}]}], "Input",
+ CellChangeTimes->{{3.545131600219019*^9, 3.545131607771686*^9}, {
+  3.545132274424697*^9, 3.5451323107632723`*^9}, {3.545132473711149*^9, 
+  3.5451324837134027`*^9}, {3.545132684935997*^9, 3.545132814432983*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      LineBox[{{-0.5, -1.}, {2.3, -1.}}]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["1",
+           Quantum`Notation`zz080Operator[1]], {0., -0.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       LineBox[{{1., -1.}, {1., -1.}}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       RectangleBox[{0.6666666666666667, -0.6666666666666667}, \
+{1.3333333333333333`, -1.3333333333333333`}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          TagBox["\[ScriptCapitalH]",
+           HoldForm], {1., -1.}, {0, 0}, Automatic, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}},
+    SubscriptBox["\[ScriptCapitalH]", 
+     OverscriptBox["1", "^"]]],
+   Annotation[#, 
+    Quantum`Computing`\[ScriptCapitalH][
+     Quantum`Notation`zz080Operator[1]], "Tooltip"]& ],
+  AspectRatio->Automatic,
+  Background->RGBColor[0.9, 0.9, 0.9],
+  ContentSelectable->False,
+  Frame->False,
+  PlotRange->All,
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.545132760273168*^9, 
+   3.545132817697743*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      TubeBox[{{-0.5, -1., 0}, {2.3, -1., 0}}, 0.03]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["1",
+            Quantum`Notation`zz080Operator[1]], TraditionalForm], {0., -0.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       TubeBox[{{1., -1., 0}, {1., -1., 0}}, 0.035]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       CuboidBox[{0.6666666666666667, -0.6666666666666667, -0.1}, {
+        1.3333333333333333`, -1.3333333333333333`, 0.1}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           TagBox["\[ScriptCapitalH]",
+            HoldForm], TraditionalForm], {1., -1., 0.2}, {0, 0}, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}},
+    SubscriptBox["\[ScriptCapitalH]", 
+     OverscriptBox["1", "^"]]],
+   Annotation[#, 
+    Quantum`Computing`\[ScriptCapitalH][
+     Quantum`Notation`zz080Operator[1]], "Tooltip"]& ],
+  Background->RGBColor[0.9, 0.9, 0.9],
+  Boxed->False]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.545132760273168*^9, 
+   3.545132817787242*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox[
+    InterpretationBox[
+     RowBox[{
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox["0",
+          Quantum`Notation`zz080KetArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Ket[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 0]]], "\[InvisibleSpace]", 
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox["0",
+          Quantum`Notation`zz080BraArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Bra[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 0]]]}],
+     Quantum`Notation`zz075NonCommutativeTimes[
+      Quantum`Notation`zz080Bra[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 0]], 
+      Quantum`Notation`zz080Ket[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 0]]]], 
+    SqrtBox["2"]], "+", 
+   FractionBox[
+    InterpretationBox[
+     RowBox[{
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox["1",
+          Quantum`Notation`zz080KetArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Ket[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 1]]], "\[InvisibleSpace]", 
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox["0",
+          Quantum`Notation`zz080BraArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Bra[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 0]]]}],
+     Quantum`Notation`zz075NonCommutativeTimes[
+      Quantum`Notation`zz080Bra[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 0]], 
+      Quantum`Notation`zz080Ket[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 1]]]], 
+    SqrtBox["2"]], "+", 
+   FractionBox[
+    InterpretationBox[
+     RowBox[{
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox["0",
+          Quantum`Notation`zz080KetArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Ket[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 0]]], "\[InvisibleSpace]", 
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox["1",
+          Quantum`Notation`zz080BraArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Bra[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 1]]]}],
+     Quantum`Notation`zz075NonCommutativeTimes[
+      Quantum`Notation`zz080Bra[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 1]], 
+      Quantum`Notation`zz080Ket[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 0]]]], 
+    SqrtBox["2"]], "-", 
+   FractionBox[
+    InterpretationBox[
+     RowBox[{
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[VerticalSeparator]", 
+         TagBox["1",
+          Quantum`Notation`zz080KetArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[RightAngleBracket]"}],
+        Quantum`Notation`zz080Ket,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Ket[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 1]]], "\[InvisibleSpace]", 
+      InterpretationBox[
+       TagBox[
+        RowBox[{"\[LeftAngleBracket]", 
+         TagBox["1",
+          Quantum`Notation`zz080BraArgs,
+          BaseStyle->{ShowSyntaxStyles -> True},
+          Editable->True,
+          Selectable->True], "\[VerticalSeparator]"}],
+        Quantum`Notation`zz080Bra,
+        BaseStyle->{ShowSyntaxStyles -> False},
+        Editable->False,
+        Selectable->False],
+       Quantum`Notation`zz080Bra[
+        Quantum`Notation`zz080Eigenstate[
+         Quantum`Notation`zz080Operator[1], 1]]]}],
+     Quantum`Notation`zz075NonCommutativeTimes[
+      Quantum`Notation`zz080Bra[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 1]], 
+      Quantum`Notation`zz080Ket[
+       Quantum`Notation`zz080Eigenstate[
+        Quantum`Notation`zz080Operator[1], 1]]]], 
+    SqrtBox["2"]]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.545132760273168*^9, 
+   3.545132817793571*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"  Input\"\>",
+        HoldForm], 
+       TagBox["\<\"  Output\"\>",
+        HoldForm]},
+      {
+       TagBox["0",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox["0",
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0]]], 
+       RowBox[{
+        FractionBox[
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox["0",
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0]]], 
+         SqrtBox["2"]], "+", 
+        FractionBox[
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox["1",
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1]]], 
+         SqrtBox["2"]]}]},
+      {
+       TagBox["1",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox["1",
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1]]], 
+       RowBox[{
+        FractionBox[
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox["0",
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0]]], 
+         SqrtBox["2"]], "-", 
+        FractionBox[
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox["1",
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1]]], 
+         SqrtBox["2"]]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+   Function[BoxForm`e$, 
+    TableForm[
+    BoxForm`e$, TableSpacing -> {1, 3}, 
+     TableHeadings -> {{0, 1}, {"  Input", "  Output"}}]]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.545132760273168*^9, 
+   3.54513281788581*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      FractionBox["1", 
+       SqrtBox["2"]], 
+      FractionBox["1", 
+       SqrtBox["2"]]},
+     {
+      FractionBox["1", 
+       SqrtBox["2"]], 
+      RowBox[{"-", 
+       FractionBox["1", 
+        SqrtBox["2"]]}]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.545132760273168*^9, 
+   3.545132817931263*^9}}]
+}, Closed]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"circuitexpr", " ", ":=", " ", 
+  RowBox[{
+   TagBox[
+    RowBox[{
+     SuperscriptBox["\[ScriptCapitalC]", 
+      TagBox[
+       RowBox[{"{", 
+        OverscriptBox["2", "^"], "}"}],
+       Quantum`Computing`zz020TPend,
+       Editable->True,
+       Selectable->True]], "[", 
+     TagBox[
+      TagBox[
+       SubscriptBox["\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+        TagBox[
+         OverscriptBox["3", "^"],
+         Quantum`Computing`zz020TPdat,
+         Editable->True,
+         Selectable->True]],
+       Quantum`Computing`zz020TP,
+       Editable->False,
+       Selectable->False],
+      Quantum`Computing`zz020TPdat,
+      Editable->True,
+      Selectable->True], "]"}],
+    Quantum`Computing`zz020TP,
+    Editable->False,
+    Selectable->False], "\[CenterDot]", 
+   TagBox[
+    RowBox[{
+     SuperscriptBox["\[ScriptCapitalC]", 
+      TagBox[
+       RowBox[{"{", 
+        OverscriptBox["1", "^"], "}"}],
+       Quantum`Computing`zz020TPend,
+       Editable->True,
+       Selectable->True]], "[", 
+     TagBox[
+      TagBox[
+       SubscriptBox["\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+        TagBox[
+         OverscriptBox["2", "^"],
+         Quantum`Computing`zz020TPdat,
+         Editable->True,
+         Selectable->True]],
+       Quantum`Computing`zz020TP,
+       Editable->False,
+       Selectable->False],
+      Quantum`Computing`zz020TPdat,
+      Editable->True,
+      Selectable->True], "]"}],
+    Quantum`Computing`zz020TP,
+    Editable->False,
+    Selectable->False]}]}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot3D", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"QuantumTableForm", "[", "circuitexpr", "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumMatrixForm", "[", "circuitexpr", "]"}]}], "Input",
+ CellChangeTimes->{3.5451328222871037`*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      LineBox[{{-0.5, -1.}, {3.3, -1.}}], LineBox[{{-0.5, -2.}, {3.3, -2.}}], 
+      LineBox[{{-0.5, -3.}, {3.3, -3.}}]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["1",
+           Quantum`Notation`zz080Operator[1]], {0., -0.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["2",
+           Quantum`Notation`zz080Operator[2]], {0., -1.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["3",
+           Quantum`Notation`zz080Operator[3]], {0., -2.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      LineBox[{{1., -1.}, {1., -2.}}], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       DiskBox[{1., -1.}, 0.125]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       LineBox[{{1., -2.}, {1., -2.}}], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        DiskBox[{1., -2.}, 0.25], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         LineBox[{{0.75, -2.}, {1.25, -2.}}], 
+         LineBox[{{1., -1.75}, {1., -2.25}}]}}}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      LineBox[{{2., -2.}, {2., -3.}}], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       DiskBox[{2., -2.}, 0.125]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       LineBox[{{2., -3.}, {2., -3.}}], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        DiskBox[{2., -3.}, 0.25], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         LineBox[{{1.75, -3.}, {2.25, -3.}}], 
+         LineBox[{{2., -2.75}, {2., -3.25}}]}}}}},
+    RowBox[{
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["2", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["3", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["1", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["2", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False]}]],
+   Annotation[#, 
+    Quantum`Notation`zz075NonCommutativeTimes[
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[2]], {
+       Quantum`Notation`zz080Operator[1]}], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[3]], {
+       Quantum`Notation`zz080Operator[2]}]], "Tooltip"]& ],
+  AspectRatio->Automatic,
+  Background->RGBColor[0.9, 0.9, 0.9],
+  ContentSelectable->False,
+  Frame->False,
+  PlotRange->All,
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.5451327607576303`*^9, 
+   3.545132779680385*^9}, 3.545132825147585*^9}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      TubeBox[{{-0.5, -1., 0}, {3.3, -1., 0}}, 0.03], 
+      TubeBox[{{-0.5, -2., 0}, {3.3, -2., 0}}, 0.03], 
+      TubeBox[{{-0.5, -3., 0}, {3.3, -3., 0}}, 0.03]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["1",
+            Quantum`Notation`zz080Operator[1]], TraditionalForm], {0., -0.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["2",
+            Quantum`Notation`zz080Operator[2]], TraditionalForm], {0., -1.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["3",
+            Quantum`Notation`zz080Operator[3]], TraditionalForm], {0., -2.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      TubeBox[{{1., -1., 0}, {1., -2., 0}}, 0.035], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       SphereBox[{1., -1., 0}, {0.125, 0.125, 0.125}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       TubeBox[{{1., -2., 0}, {1., -2., 0}}, 0.035], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        SphereBox[{1., -2., 0}, {0.25, 0.25, 0.25}], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         CylinderBox[{{1., -2., 0.02}, {1., -2., -0.02}}, 0.2857142857142857],
+          CylinderBox[{{0.98, -2., 0}, {1.02, -2., 0}}, 0.2857142857142857], 
+         CylinderBox[{{1., -2.02, 0}, {1., -1.98, 0}}, 
+          0.2857142857142857]}}}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      TubeBox[{{2., -2., 0}, {2., -3., 0}}, 0.035], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       SphereBox[{2., -2., 0}, {0.125, 0.125, 0.125}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       TubeBox[{{2., -3., 0}, {2., -3., 0}}, 0.035], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        SphereBox[{2., -3., 0}, {0.25, 0.25, 0.25}], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         CylinderBox[{{2., -3., 0.02}, {2., -3., -0.02}}, 0.2857142857142857],
+          CylinderBox[{{1.98, -3., 0}, {2.02, -3., 0}}, 0.2857142857142857], 
+         CylinderBox[{{2., -3.02, 0}, {2., -2.98, 0}}, 
+          0.2857142857142857]}}}}},
+    RowBox[{
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["2", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["3", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["1", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["2", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False]}]],
+   Annotation[#, 
+    Quantum`Notation`zz075NonCommutativeTimes[
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[2]], {
+       Quantum`Notation`zz080Operator[1]}], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[3]], {
+       Quantum`Notation`zz080Operator[2]}]], "Tooltip"]& ],
+  Background->RGBColor[0.9, 0.9, 0.9],
+  Boxed->False]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.5451327607576303`*^9, 
+   3.545132779680385*^9}, 3.545132825314849*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+eJztfQd0Vdex9hcJgx23OLETp704L/2lPBkDjokLdlySuF3AIKrppvdeRBGi
+995Mk0yT6EUgECo0SQgVZHWEGiqoSyCEBELnzS7nnn3uPfcK4/xr/W+tt1hz
+79Ut+8w3e/bM7Nkzh4/7TRgyaGS/CUMH9Hvpg3H9xgwZOmD8S++PHkdveX4H
++M4QALkvgb3W6KV80FBYWDiUPbB3/u/1/4rXL7IHT5q+P3+ivPsCe/Bg7+Ix
+emxD9HciG1Fnon/gY+XLP+Cvv8u/DbQmepvoU6IeRIOIRhGNJRrMxvpI+en3
++Oun5E9fJupA9In86UCikUQTiaYTzSGaSzRFvfrT/PWTcggvoreIPibqTjSA
+aATRBDnEbCI/MGQL4MlfA0P4CCpb3zWN+ReiN4g+JOpG1F8Zc5rFmPOIZvAR
+PlXGbGWI9Al6fJ3oX0TeRP2IhhONlwPOshhwJh+qkzJgC2PAp+nxb0T/JOoq
+BxxGNI5oqn1ANhywkGg+f6+rMth3zIO9xicZ6ELUl2iow2Bz5SD6YLNJ2Hyw
+B+Zx/kr0AdFnRH3kOEwRpnBEVuP0EuPcM4/zKtH7Uvk+51MGjHExzgKuKX3E
+OHeNcZ6hx7ZE7xJ1JOotFZKNM1mO4+s0DilwPzHUMfb0GGP/dWNQpvXq6uhF
+9AXRaDmojz6oMZu+/JpsyAFi4MNC5cYycal6x1bSOxArqSeMlTRJGXeeoiZz
+uQqxEb4QAx+yc9yCLSRP8YqrDr36k+liVmtPv9gMKQnHi03iI0hrclAIhc0u
+ff6SmGdG/NpohW5e3hhANJJoItF0ojlEs4ieYN/8jduVrBoDK4b8uDqwEUYo
+DHH0eJb/tBNdqCfRYKLxRD5E84mWE60l2ky0jWgnUYB83kDUio3xkpNJeJPo
+IwiTYGVmHJmbykcYrTAHPg+qsDw4o99Df7rsKKKpRH5ES4nWEW2VrAUSHSQ6
+ShRMdKq1N0Lo+QTRAS9vDzYmh/5TZ6vDzBizOg9jxqZzNscJng8YM9zSNMOM
+54F05TFe3k/yNx7Dpb96I/pVb8QQRdHr8y97C7XgkH9k5oqZLmYLddOl2kIr
+roRxnejElVnvfiDfS+zgjYvEAvuMC4Z/+XkzC44Gz9l6mlnw4ReforDAtYQZ
+q1/S038S/Yrot0T/pawwZipelYiZ/jBH+R4Tp1goCe8KNiVxRr/XvEV1tMxm
+My+khf3s6Ue6nNgy7wj511gpGP7qqeYtrzsLPov+8esFsqef6ddjCtdD/NJD
+twrKXBE9br5uWyEZ8njNW3zhOXzFdfeKgMZZH/h6IEuwXCxo9mlf41P+i8fM
+POiG3ZW3cPY68wQPe1zx4CE107R6lgOr2szCltfmYFeHuTj4/jyc/GgBwjsv
+QFSPhYjvuxApgxbi2vCFyB+zAMUT5qF8ih9qZsxB7axZ7ArLBTj2coADJA/O
+0TNSB1+BcCluXZWKaKEAtNu1cWePP+Rar7+3pN08rGu/CNvfWoJ9HyzD0U9X
+4HSXlTjXaxUuD1iNpKGrkT5qFXImrELh1JUo81mB6jnLcGfeEtQvWoj7S+fh
+wXJfPFg5k2MT13iG64BdaCan5c5DOnjekRzQIgFrlwHLSR892KXFZy8y32Sy
+dpveXo2Af6zF/k/X44T3RoR9vgmXBm1G/PAtSBm7BVmTtyB/xmaUzNmEyvkb
+Ubt4PeqXr0XDqtV4sG4FtA1LoW1aAG3LXCIfDlPoCwsoVNfn0hebXfFYDmip
+AkuOp6PysGOiDzp7TXOawS//uQW7bVtxqNt2nOqzAxFf+CN6pD8SxwcgfWoA
+smcFoNAvAGWL/FGzfAfurt6Oe+u3onHzFjzYuhHajrXQ/FdC+4qg7SJou+bQ
+62keBjRyGtxROnlxM5QJnPsVAspXdieu827zmk78+6GX12I5PT/h/ljHs80W
+gL3dduFI3z04PXgfzo8KROzEICRND0LmnCDkLQhC8dIgVK4KxO31+9CweQ8a
+t+1Co38AmnbtgLZ3K7TATdD2r4N2gPAcWEzkBy1ougMWEYGIhcKIOfnJaxS+
+Wxh8tyC+ZxDNoyhkKXp7rRas/5QvSZ31Hd2CENj3AI4NPoTQ0YdxcdJRXJlx
+FMm+x5C16Bjylx9DydqjqNp0FHe2HsZ9/0N4sPsAmvYFEYt7oR3aBe3oTmjH
+CcIJmpLgNfRM03F8HrQjMxTvx4Wt8zwV6wXTAQ5MP0YMT+NM27yWEa1D79ab
+5QA/465I59y/z1HsH3wCJ0YFI2zSKVzyCUH83NNIXXwa11eeQcG60yjbcho1
+O0Jw96tTaNwXjKYDx9F0+ChxdxjayQPQQvZBO0MIQmkSzm4hIoUKXQbttB/j
+m/tIlVFPg9GWxNwkIl87o529vsTnbfztvL5h8BrwRQgOjApF8MSzCPcJR5Rf
+BBIWRyJtZSSy159D4ZeRKN8ZiVu7I1AfFE48hqHpeCjxGEL8nYQWdhxaBPF8
+bj+0C3ugXfSn5y+JSGEilxoybsE9smJS3HA/k2gx0VrOubdXAPq03ddSWp8D
+E84heMYFhM+9iOjFUUhcGYW0DdHI2RqNIv9olO+Nxu0DUag/cglNwRdIYueI
+ywjiJoy4OgMtiriOOQbt8kFosSTl2AAi4jhmrYlbX5fcKtbjceJyglSKVURb
+SKMD0K1NIPq2P4yR754Qw/2Yhyn6cAenxeCkbywiFl1B9Mo4JG6IR/rWeOQE
+JKBoXzwqDsbj9rE4NJy6gqbQWDRFxBDnUcQ5obkcCS2OkCSchnb1BBHJPimQ
+ngOERjtphgO304mWEG0k2omOrfeh+2uH0a9DMEb+64zdhHykcDs7AScXJiJi
+RRKi13+NxC+TkR6QjJx9KSg6mIyK48m4HfI1GsKS8ODcVTRdSiAu44jLy9AS
+ieuvieuUcGhpJPu0YGjpxHHaPsZrq2Z4nS2lug22l/fA9sohdH0tGP3eC8UI
+W6TdG9kMXg/MS8bJZakIX5uO6C0ZSPTPRPreTOQczETR8UxUhGTidlgGGs6n
+ozE6FU1XkkmSScRjIrRU4jmdJJ15EVoWSfk6aXl2sNlMrDSiFI9mmPcjWk/k
+T8zvh63NcXR58wz6/isSI7pc8tSZ72IwH7w6C+GbriNqRzYS9uQg7UAOso/l
+ojAkB+XhObh1Phv10dfRGJeFpquZJNR0YjgF2jUCcJ2EnhsLLe8StHxiPv+M
+fdcjYiL7ZVyw/ASxuohrsM2LZO11BB3bh6DzuxHo/eklDOsei8kDE6Qgfsg3
+ofqAJzbkIWxbPi7tuoH4/QVIPVqI66cKURBWiLLzBaiJvoG7cfm4fzWPhJwD
+LeM68Uv856YRnzQBBST8IuK9+JKHaQVuNIWF7uT9hDQYpCheQSTrE7C9fhaf
+fXABPTtfxpDPEzBxSLIc+Ec8fFWWNkIDinEh8CbijpQg+WQJss6WIv9cCUqi
+S1AVdxN3kopxL7WINKOANIJA5BGIgiximCaghACUEoCyyzy6MLyzE7/2kIYY
+FrLeQXQQtnanYHszEl0+jEYv73h80T8Z40eki6+/wLemOqen95Th/MEKxJ6o
+QNKZSmRGViIvqhLFVypQebUCt1PL0JBZigfZN0m0xHHRDWg3c4k7EnkFcVuZ
+zLn01EW81VnEGxSWZaisBufCr+wkpT5Mgg6F7e0LsH1yBd17JGHgoDSMGZOF
+GdNy7bH9F8YVTgVVI+JoDWJCapAYfgvpF28hO/YWChNrUJZSg5rMKtzNrkRj
+fjlxXkqyLYZWTjKvIgQ1WQ4ee4e6kXBgfoexdWG+vT1YNtDYcnyXB1ZC/kdg
+a3sWtr9HwdYxHl17p6DfkEyMHJ+DqT4F4uvP842lqjFhwbW4FHoH8efrkBJT
+h6z4OuQn30FJRi0qr99Gbf4tNBRVo6m0kuReBq2akNwiJLW56rK8k7PNvjRV
+9rca7LPQSt2O68nM8YK1J/l0ilVL89EuDLb3otGxcyK69ElDr+HXMXRiPibO
+LsacRWUS/fd5/KxDORNSj/MRDYi91ICkKw3ISGpATloDirLqUZ53FzWFd1BX
+chv3KmrQWF2JptsE506xfYfMtCjAGO5m5ib+9kaBZLM5scD2z/p+vS+MxIKa
+2xgr9998UR+C7VXC9H4MbJ8loVO/DPQYmYNBUwox1rcEPksrJKbn+NXVKQo/
+14iomEYkJDQiNaURWZmNyM+5j5sFDai4WY9b5XW4W1WLe7eq0XinwrwsvjLG
+qS4+wN/eJABtMANqB7ExZwkBqwSEOVOi6KvEt5fw0Rp6T+Cz9c9E11F56Du1
+CCP8yjBleZXk6Vm+37HP2cUHOB/bhNirTbia1oT0rCZk5z1AQVEjSkrvobKS
+8NXUoe7ObQXXY2wvZB/jVtUZ5OXuEvLbLMCtM51dsA0/Sw+rSQf2yykS21yr
+PJSHapkFyDYnYXs3yg6w0+g89JhWjMHzyjF+RQ1mbqyVk/gUl5tpEuM0XPpa
+Q1yGhuRsDZk3mpBz8wEKywlo9T0jT8PA7VYmrfYSikqDxbhbBLjVlnv/jjBn
+M1xlVGa2dAbmFQjbW+dh65QAG2mmjWauGwHrN78CI1fWYOqmO8Y2doZixBM0
+RKZoiL6mIT5XQ0ohASvRkFPxQAHUyjRb5XUJKKiKRFTqDv73UEMNSV15cvxN
+SX/+s8C7woT3ZYj8mprrcJW94ZmrJ9S4XOD9K/mpj2Nh+zwVtpG5+Iy0tDtN
+4hc0ieM218EnoEFO5OOOsT5CUzWcy9IQk6choUjzsCc/mYFTcBbdTUVOTQwS
+bhwfYobYBkb+vwd7eyDXvC4cJaM/CthLTbBZ8qADRIZPz4moKR6nxNnTDrAp
+kvt7BGzdr8I2NAu2yQXoPLcMfZZXYxhN7yT/erv6zTUnRUIJradpOgPMIsmu
+y0LGrURcKQ4TRxTGGYp+MKNPlprJmSE5HyGneZEJ739LJdCTJZY5IBXvc3a8
+IpXVCrYBKbCR+7PNuYluSyvRb8NtjNx5F1MC78OexZtvcr76XJJF3GkGmVyb
+g4SqZJwvPM85Z4a+vwGWnXUyn6DnNvWVaJWF4xv0vwjQ881DsPNIdvignoxY
+IeZJvBfsiB+TEVunhSXourYKA7bVYvTeekw9ct8IMxY6pvc8edSE7WoOsxWi
+q/NwoTwNJ3LO84y9zj17/tz5OJE5wYc5vhPJXC+Beq718YV+5OLuPMjXvkx+
+yB75JrEVg/845/8Z5gJME3emrASnS/NwvDCVjzxWquJIyaiPuFgPMzT92FU9
+KdVdhqVVJTvMoc02Q2MBm34erJ7M6OfeZmh6HvMn7PGHcj0G3ignKsSe3Cxs
+Sr7MOdePaxiLfaSaTZUSGwt5BKyeaunn0q6Pka1OiNoKTD7WhyrquY4rTEYS
+8xfskR/etOQQ+Nkg/4Qt9Y+lfNh70yQQNm5Hsz1hVlA9oOsPi2MlMxJxmCOO
+YOk7llGcejzk6oTKD3oO81fs8Vk9wlppUjd+KqrPjviysPjMAg4Sw3twSXny
+idOV+UMzTubkOsB9vcM8M2/iNO9vAudk5+BOP+1RgztXOPnP8Qf2+LjwIErI
+sEJkOzz5d1pxgEwjWCTMLJ6+cKdxjTOhYqGKWkNiefar6o4unTcFqoluozqn
+iNXqnPZV0xHOMquDIomJmWJvqRO6u5rC5ejk4RyrBJxO8w1O5tgxvS0wjTNh
+egXmoyk9UrXANA9SnUXdAjfpTyj8vyOFPAKGnZvE3zcZuod1WrrXmS0EAHni
+7VgepIvBKQq1CrE/luz+Vqpnbyk73ZKxpfimmV39nPRhXc4sMpGc3RGW0ZR+
+wqQemDkOw8+FO0lW/whhR/vK6+q2irHd3swqM/2OxTbqXDpeY4ZeqzTUKRBi
+p0Z6BYca+Fki7ipZ9ZI/YraDrYvpklWGtZ2zA/4m3kGsJVlZpoR8ViGMu6Bt
+VndFYdlK6ij5myB5ZTy/YnJmelyolju4KywwzHZHwe4AM7tWsYfLGLO3wm57
+ObVMA3UDxuT1F2dL7q5yzaXN+0yw29d1POEYKgl2rWxNH4XvtyRYx9juv6xt
+tVXRnoWtNsIyb8F3b+eYQS9jU+MgqxDP4HuAwjcziz3hFLeR8TCtOrVqS13Z
+rqJoe2laDzPDuqHRU1XughwD/GDJ8O/krz+HOTZjJuM/zQzriRfVALvdz+o1
+cN7WPl7NSKmLwjEqE7VqwyXDf4JYBgyqGoOxUf7D2QQ/bNHefC71/oLhLiaP
+oVeCuIxJzGtYVMAJp9OCr6pPpVbqEdVPnVeKu1pHR5smfOlAwWonS6+s5o/c
+RBqifm6corvtJM7BMLSe4XyceaJnzXw7Vk2p8+jIt3E1oXiyMlV1yiwMsKHZ
+aMIos5uk8P265GMozDGQJ+Pbg1+ghVjbzCQzy/8qzEW2/w2jyNZqDzTbApGY
+5GEC0UcmRKrfdgwzLDJ5Yk7F49McEftxdzhHRXzkVyWQD6TMvHm824vj7WjE
+6p7OexJHC+9Y3mxpKcVeTwYoOkLV3VtGJlb7NFFF/Bx+DRESM9GogRSfIrZm
+dQ3Wo7wJcuSJYmoKed5TB6bHdG5rR63MtjAtaqT8FJyzOW7jLV85Z0y6f4Dw
+HX1hxFxcobpL+ejRDRtlsX6SpsdPerrtYRwCd/KyAPHvznGCq7DGKRngJ3YZ
+jPkX+fZb397yF2wpDpf6x35KuxCsJ/oSPOsEf/ZFx3SuK3cwUxYrdjCzq1uR
+hwlrZi0QGwjG7vPipx/Jq4+UkmVfXUu0DTw7jQNER4mOM1Zd5UW4fgoFJRtg
+Yk8PB1STYA5jlAlZbEjzGeF+/iHncoT8CU06NkjJMdZOEIUSnSO6QHTewdYL
+mYliTzVs1x2/mt1wF6nMtqv8x/Z95d/kcF6sxtOendetKNPdRZLbr8CKxIHT
+nEPgMlECURLRVf63WFJi0+rs6R8mNJlj5pDv5l/jf39fWC7mSZnd+0TOxEQp
+9XXgeV7OIBPlJclcKtE1omyi6/xvyWRbl969LyyiESuDyL2X/aR/pMPmXGYc
+TDnMP0uDrNaW22XP5N5NKjFzDivBz1pxkOgMUZSUcyZRHlERUQlRMYcnYbV2
+igT0nINV0OJQ8zbS2Hi0kHnakWTUxpqi1h9BmNoOMJlaL3m5f8pZniQ1ZzNY
+ES5wiugiUaJEcIOolKiKqEY+5+sKQG7FKjBgRkY9EJsKp9jLSOB1NmbnKS5U
+m5c3vIlYVfsIokmy6n++rGxfQbSaaKWsXOe52l8awH8Cc+Wqo7vzMYTwqWTS
+R04jW+jM/kQQxRGlC7Aok+DvgPWIALe5lkoZ/MkplHDMWLgJjoRX6GqfSqZg
+JIMuhK830TCiyUSziRZJ3JuIdhDtItpHFES0X1b5+3t5G2cqPzdk8mM0383i
+YGPbSn0cIT9irmSvVBC2ar8myiG6SVQt5OLBOnEYtFtGVCNsmUj6uY1G1HjL
+MoLsZijK97mQ9LaHaUTzZGfGRimcPbLl4djL3jhFz6H0HNbGGxGt6Zn+DqG/
+90oF4sL6sdkYuitkF1kWweIPoKYuOFQvKeNRUp5sZe2HMHexUqnYqionqiVq
+ILpPVK9v09VVTKG8KcLRFdlFAkyw0VP8Xp67vWQ+dxtN6L+rH8q85o3YN7wR
+/7o3Eoji3hQ9GGFtvZUa/xfMotGPZ/QdobsdkLHFEjnQZ8TiGCY/YqJhjjVM
+rjdmcAg/KqVo6uV6K9Il8yvX0ZOr2G+BFM30PoZUPE1SeU6+l/mRN1L+QRLp
+oKJ/znkfpTbOuUsSGVkXsXt5XDhT5gMDHRSCWZlS9tMqvSvgJefIS08ouQsU
+ecqvn/RfzJTqKFvqJ89sv8ISCazThAWRzGq3k/P6hjw/8UTyx0ZzCZfD02Y5
+uOoNcp/IeEaXA2ObnRIya8vCqQQpB+H75wsR/NwsAjW6ay749OE5np/rpykv
+mU5TnPeS+uGP40bLfXS2xM7f9wXDPzEzrMZ8zYWjs3iK4Nf24wIjMaIf2qiZ
+WrfZT3HEL6KXFjAWLAP4znOC0xf1jRAXQTuYs1JqcOoUN4vM7HflkTgv5gzq
+MAvH35+Nsx/PwaUuvojr6YuUfnOQNXgO8kfMasG+9pRy4qND0920Vb7cagfk
+I6AZptELRh5AzWywQQZLqPxAl+ssuxyLHnXL5S7CNWaZw31SOueV7Xyxpf08
+7HpnAQ79axFCbEsQ2W0JLvdZiqRBS5ExfClyxy5B0aTFKJ++ELdoF3Rnrh8a
+5s9B4+KZfA8pz77U3iX1cMZVpY1uyKapQmBKbKr8gJFTNSdD2A9NEmkpr6fH
+0BZJBSPM58UmeuOZWi1L5kQvAlzbfim2v7MC+/61Csc6rUFoj7W42G8d4oes
+R8qo9bg+YR0Kpq1D6aw1qPZbjbpFK1G/bDkaVy6BtmYhmtbPhbZxFrRN09gl
+7AbLHvE7xpQuk2RLzGqmpimaO4wSK+j7qqA8pSxnw5VZG2YPTTxk/8ZnXlMN
+Ef3OXha84d318P9wEw503oKTPb9ExIBtiBm2DVfHbkfG5O3I9dmO4rnbULlw
+K2qXbUHD6s24t34DHmxaC23rKmjbl0HzX0TkBy1gJtFko+eJfH0zzljnd7Fz
+qslqFblIRjIlFHHr80JMP7KLaZ5dLKPsIa2HvTuEteLMNcTyR9jlsvnD7dj1
+mT8O9QpAyMBdODd8N2LH7UHy1L24Nnsvbszfg9Kle1C9ajfq1n+F+5sD0Lht
+B5r8t0HbtRna3vXQAtdA20/yObCQnudAC5rqYbTgtIC5/cZ3qVkGrhZRs+k2
+AR4LHPB6ylaCeYR5Gez9O17GytnaeS/29grE0YH7ETriIC5OOIS46YeR6nsY
+2QsPo3D5YZSvPYTbmw6iYdsBPAgIwoM9+9AUuBvawQBoh7dDO7YF2nHCfoJ0
+48Riek1L6MhUpahRLGO9JmLxt1sYM/EzBa2nqvA2Uni996ej13oRp7+I7T0P
+I3DgURwbcRxnJwQjavpJJPieQvqiU8hZeQrF60+h8suTqN0ZjHu7TxC4Y2g6
+eATa0UPQgoOgndoL7QyBDSWwYTTRYTTJZ8lenPa1Fwov+NbaLJLq/6HklFpC
+0zLetaNktUC8tnuc0je0nlb5NvRrGyDrlX+IoOGncWJ8KMKnhyF6bjgSF4cj
+Y1UE8jZE4ObWCFQFhKNubxgaD5xF09EzaAoOISTBhOgYtAhCfC5INgntJKKp
+vbjWvsP1+zfp6y8tUSq9Ai2l5i7mrVGdCKK31y70/2uQvVXnbUOJ94+LRPC0
+8wj3vYiYxZdwdVUUMjdGIW9bFEq+ikJ14CXUHbqIB8cvQAs5R0j1RqPTRqNR
+7EFocfuI/KFd2SLL7Maaip5Ube0M5w2sZQwoNlLNYWXTuZroS3R8eRe6t9uP
+AW8etWN9X8E6NRrBcy7ztqSYVXFI2hiPzG3xyN8Vj5KgeFQficPd4Ct4cCYW
+TeFKS1JsJLR4wpxImJNOQPv6MLTkQHr251j59Pp8KyU2TPvvXUNmvpQr8VA5
+u6zFKQC21vvRrf0xDPh7iNDjF7B/VgKCF1zlLU0xG5KRtC0ZmbtSkB+UgpIj
+yag+mYy7oV/jQaTezhRPCGOhXY0mZIQ4lWY5PRRaJul25mFZKDpW7k8fWYmN
+cOSPCkqSX0pKNF57bSHat1+Edu0W4Pjx0w7Qn5DQhxGtkB1T+2B75Si83wjB
+gH+GY0yXC3IdP4/g5WkIX5eBmK2ZuPpVJjKDriHvyDWUnLyG6rOZqDuXgcao
+dDRdSaVZTSbMV6GlkQwySQbXadazSdNzCH9usFH86WmKmyY/vG5b5edn6DWP
+uggqK5NQW5vCYKO8/Cp+8YuZaGpyUvhWUtkDeGdNx1dPovM7Yej3yUWM7nHZ
+6F5Suq5OrLmOsC3ZiPbPQeK+XGQczkPuyTzcPJuLqnO5uBOdg/tx19F0NYvm
+PRNaRhrJgGSSkwgt/wq0ApJH4TlX3VbjzRqhHux9I71vrYjDk0vBExUVSfjt
+b2fzvxRbri+D9aKTq/VR2P4Wis4fnEefzpcxsk+CXQw9DD6Pb8zH2R0FiNpb
+iIRDRUgLLkJOaBGKzxWhMroQtXEFuJd0A01pedCu5RB8Ekd+BkEnFSlOglYS
+B600ypUYxjz8wnB7RtZWEYMHB94C48Ztx29+MxsXL0baV4W8i5I9FrMLJBC2
+tsGwvRGBrqzdqls8hg9IxpTRGY/JXMmZXSW4sL8UccfLkHq6DNcjy1AYVYby
+K6W4lVSC+rSbeJBVRLpfQHOfT+CzCfw1aOUkCFJSexOYw0ZirMxrP/qamC7O
+XIw10diYjrt3U7kY8vLi0KbNfPZalMi1gMOdY3TlsHmtIWIdiSGwdTiPjp9c
+Qc+eSRgyOB2Txl+3N24NMHgPCazEuSNViD1Vja/Dq3HtYjVuxFaj9GoVqtMq
+UXetAvdzy0geJdBukmzKbpAsSEmqr5nkcTtzvSqTYf+mtfG6WSzMTLz//nK8
+8cZitG27AMuWBTGxKGdpFO2Y7sxl3pvbnclLEO2Erc/A9s4l2DomwPvzVAwa
+noVxk/LE/u1ZhJ+4jejQWiSer0V6TC1yE2tRnHIbFZm3cDunBg0FVWi6WUEK
+UgqtqhhaDQnndo5JMNfiFqmKMvhbrRZja/+Wo7Nsbx7YsW7SsS6A3yXL7mC4
+OFgb7hneLtex81V06ZeOPiOzMWpqAab73TSasZRTqNCQu7gYUY+4qHqkxNXj
++tf1KMioR2l2Hapv3MGd4tu4V1aNxqpKNN0q1ZvL7LKpLtirymaQeRE5ltU0
+k/XHNGEpVaE4nBNa3WvFtCOXW84W0DOgkjMPvYHiFVpY70aLjrUBmeg1Og9D
+ZxRh0gK9A+97nEc1ax15/j5iLjfiamIjMlIbkZt1H0V591BeVI+asjrUVdWi
+4VaN3qmmy6a28hSuZW7Vh+r/cAvKVBdjtaDedxRRG7OI9NMD/bY7Vm18zpG5
+h+GidG06AtvbtLA6J6HjgGvoMjYfA3xuYuzCCsxcUyOF9QxXdLs2XWrCxbgm
+xH3dhOSMJlzLeYC8ggcoLrmP8ooG1NTU4U7tbfu2gngoKjlm3yD2/TetLFke
+O8EsF8dGTT157j4B59hZRhr0ejhZm0TRLkdC6TWzBMMWVWLy2tsSVStEJGiI
+TtGQcE1Dap6GrKIm5JeRIKruKzcCYKe/VRF2+J8/3OJxVZYwVS9eHWuMo5ZN
+WNUl6PcFsSefnlT31gLuhzGw9UmDjRZKF58S9CeoYwiqz/Z6o2HXR3FHiRoi
+0zTEXNeQmE/wiwl+uWa/owCBzq2JQUw2v+WbflzkblW4aYYwDjlsAvsoM3b1
+XojNZe1nPGufak+5NbJ1o2keng3b9CJ0J70fTLgnbL+rT95pgnkum6De0IS4
+WsmVzzrHom6c4ZeZAnF4+Mh6PcuOsbPAKOobHWupXTWVOdnYHzjDZE1lE/Pw
+mV8peq+qwbCtdZi895691d/PFCh5GJ1JLZFQlYLTuWGm2rPJEIW+j67KU4TI
+9Ptd6ie3L6OZCner4+0X7LmxFjIz1XlpOXpvuoURX9018lQLDIyPSysYXX0D
+kWVp9vcdOw8mQxYnWquv1e0yXapvD4F3oNlkqZUE1iGAlYPgp8ncCbVkiPnZ
+B57EyZJ8BOZctcNhR3Fvw7kAeRLn3zR/Vho7CubzJD2/aarn7efsva2alq0S
+xoZr4idxz0tl9M8pxKb0NMHySHs4yL73K8ml3gk3FfaK6g/c66Orcl/91GOC
+Xu77uRmPlat1VZ9sbJN4sfRzUiPlvS7Fvc+MqnDHaseJMHW5PIKuGfKU9cA9
+zVj088KHqcAyTNLv2OMLAouB4F04N76wsRwaX9QTOKtiTOcMsLyBp2JQmZW3
+akh0ddTp42X3cJ5GyOPJWsDsK6OFWDsGnvfgXPY+HpZldu7Vypz5FTVIwpyL
+SnID08P2cHCT3l7EgmP102XB9ftSK9WeHhYItv036dEowXgnJ3dk1ePsqjJi
+8icKx+wYuK8Dx2xCXnbWG7XnrrlDaR9ZBuJQSu6qYcqivMUo4e4o2f0NxHLp
+C3NzwRjICr5HUwvDisuS3Q/NY6nl75YVXpYVIF0k06wpTa+9U5lmqH//zbXC
+Mgkka3f/YebbXWPjbAe+jbH0VipWMcIWeH+Y277YpP/62+nGDL1k9j0zw47t
+pe5Mu7Fb0Jup/iAl58gws0wvNa8dY+Fc7GXWDnnnUsUlqDUfrm24Ykz1RiRW
+isOqMwY48MoQ/9S9UvR/WKWQNzzlBd32wo/2ePiC6emyG6QF71ZkxkVtk6Gr
+MbHxFe3Fz6K9HG9G+031Yro42YNM07BSB6a/VubYOXodLnllHUifOPP6hcKr
+B39sIVaIXg31Cp78ZkpiHQguUhG0kHy4CJbHKSa9FS/N+lRKSe1bZAMIjlsK
+pphI2cpkSSoWBdn0DbOuMuod6R1VxqLr21hKS1WV0T3mAi5u0fv4LFdHZgjV
+7kreSNEWRpeH3tzALsrsHLO8Qy2Lgb6JekzDKsHfSd37eRnFl18oisx9Wlep
+NaMlg74SymJ82yleo3DhIbsdmBYxO8t8A58c5tyGyal3bM7YDovJcdHIaUyO
+vHNasNhbscv+QCBg61mPv9kIrLp7nbwMK+Bldeqs7O4YXAhXZDLkXYEGibhG
+0zI+FLEau9LThnHWd2RskCVgt4Hi96vBIYhS4XCILoQLsHSLWy2v4qHX2rPt
+JttZfyY0huNhV9kssbBGEVY8ymru4yF6HJIhygmDscNx8H/aNc5D7aTQOxQn
+SQFsBLsps+j3iIQo0mSjsgYFVvKcK19H6lcYKFdIQMAFPP30JLz11hJCyx49
+UVAQzw8g2DcUB/e8s77pZ75d5eSxqV8D0dDBJiuC6ApRmmSDNRaw0nxWnV6A
+nSorLXDjRgHmzt2NUaO24d69NH4kpriqF2HcwMNFGSdjh+2D+kjJMLlvlfpz
+VkqFscJ6HFh/A+sMYIXxt8CKwncqsid2mASCg8/gk09WsfMHfjT1lsHOT2Fe
+/1a3Z1ZsPGPtA/kV9tFqqXTBEM0Lem06Y6uGqA6izLpOsKvyph+SHTx4CoMG
+beZ/ESn/aYM7y+AY8z0LNTrnV2Eua7CcTaZYQRCVv2wmMyDqnasEbx68ENxc
+P2/SsMeQnZ2HqqokzmZOzhW8/DKLguivv5qNaTNza7obsdjX8f9xhIUw/eXH
+m+RcsxXM1tN1iGJ/JlBWmH0PrCEiwMxfcnIW1/vXX1+E1q3n4fDhEMFfWzN/
+VpPtqvKT8TlGuGPmz5hZXysFydY+W/dZEP01VVL/KsUtldW139o8o44F/o63
+UbDOg/D8JHO8zG4fU7RN9C7tdrzoX77drPjQmncY8Y/mcNOdHJ32ehccB/u9
+a5mo//+KlUyMwPKiGHXFw0O1SnvPwGUxzlIzQMdjSHcA/eLFEIuah9X8xidB
+jOVwJ63mIJni12QxhK/z/tH6YNXdXjRVjDXr0aEZoYNwRuJuKe6hudoLTMsW
+Q0z5d0DLFWNNfDho7nd/N8RY4x4NGo98boohRj06NCO8KRVjDX90aEaer0KM
+NeTRoU2+pTplq/+Cq5mUvgGsVh2p1TfGctfx51bdBozl8WhUv8pGmQ59E2L8
+X1Su/9uyhXZjl/nt3gB/BzNmfMUdG6NZs3Y5fov7Og+sWXPA4//5RzKsWrhw
+L159dYHlV74Zzv8f/ps5fOd/AEc34vY=\
+\>"]],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"  Input\"\>",
+        HoldForm], 
+       TagBox["\<\"  Output\"\>",
+        HoldForm]},
+      {
+       TagBox["0",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]]},
+      {
+       TagBox["1",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]]},
+      {
+       TagBox["2",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]]},
+      {
+       TagBox["3",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]]},
+      {
+       TagBox["4",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]]},
+      {
+       TagBox["5",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]]},
+      {
+       TagBox["6",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]]},
+      {
+       TagBox["7",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+   Function[BoxForm`e$, 
+    TableForm[
+    BoxForm`e$, TableSpacing -> {1, 3}, 
+     TableHeadings -> {{0, 1, 2, 3, 4, 5, 6, 7}, {"  Input", "  Output"}}]]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.5451327607576303`*^9, 
+   3.545132779680385*^9}, 3.545132825523301*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "0", "0", "0", "0", "0", "0", "0"},
+     {"0", "1", "0", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "1", "0", "0", "0", "0"},
+     {"0", "0", "1", "0", "0", "0", "0", "0"},
+     {"0", "0", "0", "0", "0", "0", "1", "0"},
+     {"0", "0", "0", "0", "0", "0", "0", "1"},
+     {"0", "0", "0", "0", "0", "1", "0", "0"},
+     {"0", "0", "0", "0", "1", "0", "0", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.545131617957261*^9, 3.545131720398802*^9, 3.545132283094206*^9, 
+   3.545132313207382*^9, 3.545132485792118*^9, {3.5451327607576303`*^9, 
+   3.545132779680385*^9}, 3.545132825565564*^9}]
+}, Closed]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"circuitexpr", " ", ":=", " ", 
+  RowBox[{
+   TagBox[
+    RowBox[{
+     SuperscriptBox["\[ScriptCapitalC]", 
+      TagBox[
+       RowBox[{"{", 
+        OverscriptBox["2", "^"], "}"}],
+       Quantum`Computing`zz020TPend,
+       Editable->True,
+       Selectable->True]], "[", 
+     TagBox[
+      TagBox[
+       SubscriptBox["\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+        TagBox[
+         OverscriptBox["3", "^"],
+         Quantum`Computing`zz020TPdat,
+         Editable->True,
+         Selectable->True]],
+       Quantum`Computing`zz020TP,
+       Editable->False,
+       Selectable->False],
+      Quantum`Computing`zz020TPdat,
+      Editable->True,
+      Selectable->True], "]"}],
+    Quantum`Computing`zz020TP,
+    Editable->False,
+    Selectable->False], "\[CenterDot]", 
+   SubscriptBox["\[ScriptCapitalY]", 
+    OverscriptBox["2", "^"]], "\[CenterDot]", 
+   TagBox[
+    RowBox[{
+     SuperscriptBox["\[ScriptCapitalC]", 
+      TagBox[
+       RowBox[{"{", 
+        OverscriptBox["1", "^"], "}"}],
+       Quantum`Computing`zz020TPend,
+       Editable->True,
+       Selectable->True]], "[", 
+     TagBox[
+      TagBox[
+       SubscriptBox["\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+        TagBox[
+         OverscriptBox["2", "^"],
+         Quantum`Computing`zz020TPdat,
+         Editable->True,
+         Selectable->True]],
+       Quantum`Computing`zz020TP,
+       Editable->False,
+       Selectable->False],
+      Quantum`Computing`zz020TPdat,
+      Editable->True,
+      Selectable->True], "]"}],
+    Quantum`Computing`zz020TP,
+    Editable->False,
+    Selectable->False], "\[CenterDot]", 
+   SubscriptBox["\[ScriptCapitalH]", 
+    OverscriptBox["3", "^"]], "\[CenterDot]", 
+   SubscriptBox["\[ScriptCapitalX]", 
+    OverscriptBox["2", "^"]], "\[CenterDot]", 
+   SubscriptBox["\[ScriptCapitalH]", 
+    OverscriptBox["1", "^"]]}]}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"QuantumPlot3D", "[", "circuitexpr", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"QuantumTableForm", "[", "circuitexpr", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.545129643722414*^9, 3.545129688320043*^9}, {
+   3.545130031020557*^9, 3.545130082207963*^9}, {3.5451301623750896`*^9, 
+   3.545130164368973*^9}, {3.545130578361319*^9, 3.545130647924808*^9}, {
+   3.545130698681816*^9, 3.545130706717637*^9}, {3.545130786754471*^9, 
+   3.54513079127354*^9}, {3.545130899501976*^9, 3.5451309025742598`*^9}, {
+   3.545130968808173*^9, 3.545130978161132*^9}, {3.54513101505801*^9, 
+   3.545131060242908*^9}, {3.545131112485518*^9, 3.545131114351923*^9}, {
+   3.5451311858574257`*^9, 3.5451312175746307`*^9}, {3.5451314273533163`*^9, 
+   3.5451314736412497`*^9}, 3.545131530878078*^9, 3.5451317286152973`*^9, {
+   3.54513183526888*^9, 3.545131899123811*^9}, 3.545132014646791*^9, 
+   3.545132588439927*^9}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      LineBox[{{-0.5, -1.}, {5.3, -1.}}], LineBox[{{-0.5, -2.}, {5.3, -2.}}], 
+      LineBox[{{-0.5, -3.}, {5.3, -3.}}]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["1",
+           Quantum`Notation`zz080Operator[1]], {0., -0.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["2",
+           Quantum`Notation`zz080Operator[2]], {0., -1.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          InterpretationBox["3",
+           Quantum`Notation`zz080Operator[3]], {0., -2.75}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       LineBox[{{1., -1.}, {1., -1.}}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       RectangleBox[{0.6666666666666667, -0.6666666666666667}, \
+{1.3333333333333333`, -1.3333333333333333`}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          TagBox["\[ScriptCapitalH]",
+           HoldForm], {1., -1.}, {0, 0}, Automatic, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       LineBox[{{1., -2.}, {1., -2.}}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       RectangleBox[{0.6666666666666667, -1.6666666666666667`}, \
+{1.3333333333333333`, -2.3333333333333335`}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          TagBox["\[ScriptCapitalX]",
+           HoldForm], {1., -2.}, {0, 0}, Automatic, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       LineBox[{{1., -3.}, {1., -3.}}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       RectangleBox[{0.6666666666666667, -2.6666666666666665`}, \
+{1.3333333333333333`, -3.3333333333333335`}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          TagBox["\[ScriptCapitalH]",
+           HoldForm], {1., -3.}, {0, 0}, Automatic, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      LineBox[{{2., -1.}, {2., -2.}}], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       DiskBox[{2., -1.}, 0.125]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       LineBox[{{2., -2.}, {2., -2.}}], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        DiskBox[{2., -2.}, 0.25], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         LineBox[{{1.75, -2.}, {2.25, -2.}}], 
+         LineBox[{{2., -1.75}, {2., -2.25}}]}}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       LineBox[{{3., -2.}, {3., -2.}}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       RectangleBox[{2.6666666666666665`, -1.6666666666666667`}, \
+{3.3333333333333335`, -2.3333333333333335`}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[InsetBox[
+          TagBox["\[ScriptCapitalY]",
+           HoldForm], {3., -2.}, {0, 0}, Automatic, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      LineBox[{{4., -2.}, {4., -3.}}], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       DiskBox[{4., -2.}, 0.125]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       LineBox[{{4., -3.}, {4., -3.}}], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        DiskBox[{4., -3.}, 0.25], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         LineBox[{{3.75, -3.}, {4.25, -3.}}], 
+         LineBox[{{4., -2.75}, {4., -3.25}}]}}}}},
+    RowBox[{
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["2", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["3", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalY]", 
+       OverscriptBox["2", "^"]], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["1", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["2", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalH]", 
+       OverscriptBox["3", "^"]], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalX]", 
+       OverscriptBox["2", "^"]], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalH]", 
+       OverscriptBox["1", "^"]]}]],
+   Annotation[#, 
+    Quantum`Notation`zz075NonCommutativeTimes[
+     Quantum`Computing`\[ScriptCapitalH][
+      Quantum`Notation`zz080Operator[1]], 
+     Quantum`Computing`\[ScriptCapitalX][
+      Quantum`Notation`zz080Operator[2]], 
+     Quantum`Computing`\[ScriptCapitalH][
+      Quantum`Notation`zz080Operator[3]], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[2]], {
+       Quantum`Notation`zz080Operator[1]}], 
+     Quantum`Computing`\[ScriptCapitalY][
+      Quantum`Notation`zz080Operator[2]], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[3]], {
+       Quantum`Notation`zz080Operator[2]}]], "Tooltip"]& ],
+  AspectRatio->Automatic,
+  Background->RGBColor[0.9, 0.9, 0.9],
+  ContentSelectable->False,
+  Frame->False,
+  PlotRange->All,
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{{3.5451300442220078`*^9, 3.545130082686178*^9}, 
+   3.545130184823941*^9, 3.545130590375452*^9, {3.5451306312685213`*^9, 
+   3.545130651474185*^9}, 3.5451307077983828`*^9, 3.5451307931726313`*^9, 
+   3.545130904767247*^9, {3.545130990525157*^9, 3.545131019987008*^9}, 
+   3.545131220753934*^9, 3.545131477833585*^9, 3.545131546606925*^9, 
+   3.5451317504752274`*^9, {3.545131854197678*^9, 3.545131882168524*^9}, 
+   3.5451319193088903`*^9, 3.545132018491968*^9, 3.5451325910268297`*^9}],
+
+Cell[BoxData[
+ Graphics3DBox[
+  TagBox[
+   TooltipBox[{
+     {RGBColor[0, 0, 
+       NCache[
+        Rational[4, 9], 0.4444444444444444]], Thickness[0.006], 
+      TubeBox[{{-0.5, -1., 0}, {5.3, -1., 0}}, 0.03], 
+      TubeBox[{{-0.5, -2., 0}, {5.3, -2., 0}}, 0.03], 
+      TubeBox[{{-0.5, -3., 0}, {5.3, -3., 0}}, 0.03]}, {
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["1",
+            Quantum`Notation`zz080Operator[1]], TraditionalForm], {0., -0.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["2",
+            Quantum`Notation`zz080Operator[2]], TraditionalForm], {0., -1.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}, 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           InterpretationBox["3",
+            Quantum`Notation`zz080Operator[3]], TraditionalForm], {0., -2.75, 
+          0.2}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       TubeBox[{{1., -1., 0}, {1., -1., 0}}, 0.035]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       CuboidBox[{0.6666666666666667, -0.6666666666666667, -0.1}, {
+        1.3333333333333333`, -1.3333333333333333`, 0.1}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           TagBox["\[ScriptCapitalH]",
+            HoldForm], TraditionalForm], {1., -1., 0.2}, {0, 0}, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       TubeBox[{{1., -2., 0}, {1., -2., 0}}, 0.035]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       CuboidBox[{0.6666666666666667, -1.6666666666666667`, -0.1}, {
+        1.3333333333333333`, -2.3333333333333335`, 0.1}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           TagBox["\[ScriptCapitalX]",
+            HoldForm], TraditionalForm], {1., -2., 0.2}, {0, 0}, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       TubeBox[{{1., -3., 0}, {1., -3., 0}}, 0.035]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       CuboidBox[{0.6666666666666667, -2.6666666666666665`, -0.1}, {
+        1.3333333333333333`, -3.3333333333333335`, 0.1}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           TagBox["\[ScriptCapitalH]",
+            HoldForm], TraditionalForm], {1., -3., 0.2}, {0, 0}, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      TubeBox[{{2., -1., 0}, {2., -2., 0}}, 0.035], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       SphereBox[{2., -1., 0}, {0.125, 0.125, 0.125}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       TubeBox[{{2., -2., 0}, {2., -2., 0}}, 0.035], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        SphereBox[{2., -2., 0}, {0.25, 0.25, 0.25}], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         CylinderBox[{{2., -2., 0.02}, {2., -2., -0.02}}, 0.2857142857142857],
+          CylinderBox[{{1.98, -2., 0}, {2.02, -2., 0}}, 0.2857142857142857], 
+         CylinderBox[{{2., -2.02, 0}, {2., -1.98, 0}}, 
+          0.2857142857142857]}}}}, {
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       TubeBox[{{3., -2., 0}, {3., -2., 0}}, 0.035]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       CuboidBox[{2.6666666666666665`, -1.6666666666666667`, -0.1}, {
+        3.3333333333333335`, -2.3333333333333335`, 0.1}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[Text3DBox[
+          FormBox[
+           TagBox["\[ScriptCapitalY]",
+            HoldForm], TraditionalForm], {3., -2., 0.2}, {0, 0}, {1, 0}],
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}]}}, 
+     {RGBColor[
+       NCache[
+        Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+      TubeBox[{{4., -2., 0}, {4., -3., 0}}, 0.035], 
+      {RGBColor[0, 1, 0], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       SphereBox[{4., -2., 0}, {0.125, 0.125, 0.125}]}, 
+      {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       {RGBColor[0, 0, 
+         Rational[4, 9]], 
+        StyleBox[{},
+         StripOnInput->False,
+         FontFamily->"Verdana",
+         FontSize->Small,
+         Background->RGBColor[1, 1, 0.85]]}}, 
+      {RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.004], 
+       Arrowheads[Small], EdgeForm[{RGBColor[
+        NCache[
+         Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+       TubeBox[{{4., -3., 0}, {4., -3., 0}}, 0.035], 
+       {RGBColor[1, 1, 0.85], Thickness[0.006], EdgeForm[{RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        {RGBColor[0, 0, 
+          Rational[4, 9]], 
+         StyleBox[{},
+          StripOnInput->False,
+          FontFamily->"Verdana",
+          FontSize->Small,
+          Background->RGBColor[1, 1, 0.85]]}}, 
+       {RGBColor[1, 1, 0.85], Thickness[0.003], Arrowheads[Small], EdgeForm[{
+        RGBColor[
+         NCache[
+          Rational[4, 9], 0.4444444444444444], 0, 0], Thickness[0.006]}], 
+        SphereBox[{4., -3., 0}, {0.25, 0.25, 0.25}], 
+        {RGBColor[0, 
+          NCache[
+           Rational[2, 3], 0.6666666666666666], 0], Thickness[0.004], 
+         CylinderBox[{{4., -3., 0.02}, {4., -3., -0.02}}, 0.2857142857142857],
+          CylinderBox[{{3.98, -3., 0}, {4.02, -3., 0}}, 0.2857142857142857], 
+         CylinderBox[{{4., -3.02, 0}, {4., -2.98, 0}}, 
+          0.2857142857142857]}}}}},
+    RowBox[{
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["2", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["3", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalY]", 
+       OverscriptBox["2", "^"]], "\[CenterDot]", 
+      TagBox[
+       RowBox[{
+         SuperscriptBox["\[ScriptCapitalC]", 
+          TagBox[
+           RowBox[{"{", 
+             OverscriptBox["1", "^"], "}"}], Quantum`Computing`zz020TPend, 
+           Editable -> True, Selectable -> True]], "[", 
+         TagBox[
+          SubscriptBox[
+          "\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT]", 
+           OverscriptBox["2", "^"]], Quantum`Computing`zz020TPdat, Editable -> 
+          True, Selectable -> True], "]"}], Quantum`Computing`zz020TP, 
+       Editable -> False, Selectable -> False], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalH]", 
+       OverscriptBox["3", "^"]], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalX]", 
+       OverscriptBox["2", "^"]], "\[CenterDot]", 
+      SubscriptBox["\[ScriptCapitalH]", 
+       OverscriptBox["1", "^"]]}]],
+   Annotation[#, 
+    Quantum`Notation`zz075NonCommutativeTimes[
+     Quantum`Computing`\[ScriptCapitalH][
+      Quantum`Notation`zz080Operator[1]], 
+     Quantum`Computing`\[ScriptCapitalX][
+      Quantum`Notation`zz080Operator[2]], 
+     Quantum`Computing`\[ScriptCapitalH][
+      Quantum`Notation`zz080Operator[3]], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[2]], {
+       Quantum`Notation`zz080Operator[1]}], 
+     Quantum`Computing`\[ScriptCapitalY][
+      Quantum`Notation`zz080Operator[2]], 
+     Quantum`Computing`zz020Controlled[
+      Quantum`Computing`\[ScriptCapitalN]\[ScriptCapitalO]\[ScriptCapitalT][
+       Quantum`Notation`zz080Operator[3]], {
+       Quantum`Notation`zz080Operator[2]}]], "Tooltip"]& ],
+  Background->RGBColor[0.9, 0.9, 0.9],
+  Boxed->False]], "Output",
+ CellChangeTimes->{{3.5451300442220078`*^9, 3.545130082686178*^9}, 
+   3.545130184823941*^9, 3.545130590375452*^9, {3.5451306312685213`*^9, 
+   3.545130651474185*^9}, 3.5451307077983828`*^9, 3.5451307931726313`*^9, 
+   3.545130904767247*^9, {3.545130990525157*^9, 3.545131019987008*^9}, 
+   3.545131220753934*^9, 3.545131477833585*^9, 3.545131546606925*^9, 
+   3.5451317504752274`*^9, {3.545131854197678*^9, 3.545131882168524*^9}, 
+   3.5451319193088903`*^9, 3.545132018491968*^9, 3.545132591258116*^9},
+ ImageCache->GraphicsData["CompressedBitmap", "\<\
+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\
+\>"]],
+
+Cell[BoxData[
+ FormBox[
+  TagBox[
+   TagBox[GridBox[{
+      {
+       StyleBox["\[Null]",
+        ShowStringCharacters->False], 
+       TagBox["\<\"  Input\"\>",
+        HoldForm], 
+       TagBox["\<\"  Output\"\>",
+        HoldForm]},
+      {
+       TagBox["0",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["1",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["2",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["3",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 1], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["4",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["5",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 0], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["6",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 0]]], 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]},
+      {
+       TagBox["7",
+        HoldForm], 
+       InterpretationBox[
+        TagBox[
+         RowBox[{"\[VerticalSeparator]", 
+          TagBox[
+           RowBox[{"1", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+           Quantum`Notation`zz080KetArgs,
+           BaseStyle->{ShowSyntaxStyles -> True},
+           Editable->True,
+           Selectable->True], "\[RightAngleBracket]"}],
+         Quantum`Notation`zz080Ket,
+         BaseStyle->{ShowSyntaxStyles -> False},
+         Editable->False,
+         Selectable->False],
+        Quantum`Notation`zz080Ket[
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[1], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[2], 1], 
+         Quantum`Notation`zz080Eigenstate[
+          Quantum`Notation`zz080Operator[3], 1]]], 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+          InterpretationBox[
+           TagBox[
+            RowBox[{"\[VerticalSeparator]", 
+             TagBox[
+              RowBox[{
+              "0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "0"}],
+              Quantum`Notation`zz080KetArgs,
+              BaseStyle->{ShowSyntaxStyles -> True},
+              Editable->True,
+              Selectable->True], "\[RightAngleBracket]"}],
+            Quantum`Notation`zz080Ket,
+            BaseStyle->{ShowSyntaxStyles -> False},
+            Editable->False,
+            Selectable->False],
+           Quantum`Notation`zz080Ket[
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[1], 0], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[2], 1], 
+            Quantum`Notation`zz080Eigenstate[
+             Quantum`Notation`zz080Operator[3], 0]]]}]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"0", "\[InvisibleSpace]", "1", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}], "+", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "0"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 0]]]}], "-", 
+        RowBox[{
+         FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+         InterpretationBox[
+          TagBox[
+           RowBox[{"\[VerticalSeparator]", 
+            TagBox[
+             RowBox[{"1", "\[InvisibleSpace]", "0", "\[InvisibleSpace]", "1"}],
+             Quantum`Notation`zz080KetArgs,
+             BaseStyle->{ShowSyntaxStyles -> True},
+             Editable->True,
+             Selectable->True], "\[RightAngleBracket]"}],
+           Quantum`Notation`zz080Ket,
+           BaseStyle->{ShowSyntaxStyles -> False},
+           Editable->False,
+           Selectable->False],
+          Quantum`Notation`zz080Ket[
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[1], 1], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[2], 0], 
+           Quantum`Notation`zz080Eigenstate[
+            Quantum`Notation`zz080Operator[3], 1]]]}]}]}
+     },
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+       "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+   Function[BoxForm`e$, 
+    TableForm[
+    BoxForm`e$, TableSpacing -> {1, 3}, 
+     TableHeadings -> {{0, 1, 2, 3, 4, 5, 6, 7}, {"  Input", "  Output"}}]]], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.5451300442220078`*^9, 3.545130082686178*^9}, 
+   3.545130184823941*^9, 3.545130590375452*^9, {3.5451306312685213`*^9, 
+   3.545130651474185*^9}, 3.5451307077983828`*^9, 3.5451307931726313`*^9, 
+   3.545130904767247*^9, {3.545130990525157*^9, 3.545131019987008*^9}, 
+   3.545131220753934*^9, 3.545131477833585*^9, 3.545131546606925*^9, 
+   3.5451317504752274`*^9, {3.545131854197678*^9, 3.545131882168524*^9}, 
+   3.5451319193088903`*^9, 3.545132018491968*^9, 3.5451325921795464`*^9}]
+}, Closed]]
+},
+WindowSize->{640, 655},
+WindowMargins->{{Automatic, 256}, {Automatic, 24}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (February 25, 2009)",
+StyleDefinitions->FrontEnd`FileName[{"Article"}, "JournalArticle.nb", 
+  CharacterEncoding -> "iso8859-1"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 83, 1, 32, "Input"],
+Cell[631, 23, 44, 1, 4, "PageBreak",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[700, 28, 830, 15, 145, "Input"],
+Cell[1533, 45, 2624, 71, 112, "Output"],
+Cell[4160, 118, 2657, 70, 192, "Output"],
+Cell[6820, 190, 6114, 170, 70, "Output"],
+Cell[12937, 362, 5008, 140, 115, "Output"],
+Cell[17948, 504, 964, 30, 83, "Output"]
+}, Closed]],
+Cell[18927, 537, 44, 1, 4, "PageBreak",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[18996, 542, 1962, 61, 130, "Input"],
+Cell[20961, 605, 7358, 188, 257, "Output"],
+Cell[28322, 795, 21783, 424, 239, 7695, 191, "CachedBoxData", "BoxData", \
+"Output"],
+Cell[50108, 1221, 14653, 378, 215, "Output"],
+Cell[64764, 1601, 1138, 27, 155, "Output"]
+}, Closed]],
+Cell[65917, 1631, 44, 1, 4, "PageBreak",
+ PageBreakBelow->True],
+Cell[CellGroupData[{
+Cell[65986, 1636, 2931, 77, 108, "Input"],
+Cell[68920, 1715, 12249, 303, 188, "Output"],
+Cell[81172, 2020, 23638, 489, 212, 12539, 307, "CachedBoxData", "BoxData", \
+"Output"],
+Cell[104813, 2511, 38850, 945, 271, "Output"]
+}, Closed]]
+}
+]
+*)
+
+(* End of internal cache information *)
